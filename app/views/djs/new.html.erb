@@ -1,0 +1,9 @@
+<%= form_for @dj, html: { multipart: true } do|f| %>
+  <div class="field">
+  <%= f.label :dj_image %>
+  <%= f.file_field :dj_image %></div>
+  <div class="field">
+  <%= f.label "Dj Name" %>
+  <%= f.text_field :dj_name %>
+  <%= f.submit %></div>
+<% end %>

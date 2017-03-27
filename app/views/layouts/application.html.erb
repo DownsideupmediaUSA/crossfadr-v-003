@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crossfadr</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/>
+
+    <%= csrf_meta_tags %>
+
+    <!-- <%= stylesheet_link_tag    'application', media: 'all' %> -->
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body ng-app="crossfadr" ng-controller="MainCtrl">
+    <div class="ui pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Mixes
+      </a>
+      <a class="item">
+        Dj's
+      </a>
+      <a class="item">
+        About
+      </a>
+      <a class="item">
+        Contact
+      </a>
+      <div class="right menu" id="abId0.43591901674613154">
+        <div class="item" id="abId0.5321512046600605">
+          <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui segment">
+      <!-- <p>  <ui-view></ui-view></p> -->
+      <%= yield %>
+    </div>
+
+
+
+
+  </body>
+</html>

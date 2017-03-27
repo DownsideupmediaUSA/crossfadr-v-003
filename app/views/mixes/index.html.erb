@@ -1,0 +1,3 @@
+<% @mixes.each do |mix| %>
+  <li><%= link_to mix.mix_title, mix_path(mix) %> by <%= display_dj(mix) %> </li>
+<% end %>

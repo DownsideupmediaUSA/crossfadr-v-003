@@ -1,0 +1,14 @@
+<ul>
+  Dj's:
+  <br>
+    <h4><%= @dj.dj_name%></h4>
+</ul>
+<p>
+  <ul>
+    <% @dj.mixes.each do |mix|%>
+      <li>
+        <%= link_to mix.title, mix_path(mix) %>
+      </li>
+    <%end%>
+  </ul>
+</p>

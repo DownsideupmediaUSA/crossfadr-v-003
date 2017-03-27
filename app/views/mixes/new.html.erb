@@ -1,0 +1,16 @@
+<%= form_for @mix, html: { multipart: true } do|f| %>
+  <div class="field"> <%= f.label :mix_image %>:
+  <%= f.file_field :mix_image %></div>
+  <div class="field"> <%= f.label :mix_mp3 %>:
+  <%= f.file_field :mix_mp3 %></div>
+  <div class="field"> <%= f.label :mix_title %>:
+  <%= f.text_field :mix_title %></div>
+
+
+  <div class="field">
+  Select a
+  <%= f.collection_select :dj_id, Dj.all, :id, :dj_name, :prompt => "Dj:" %> <br>
+  Select a
+  <%= f.collection_select :genre_id, Genre.all, :id, :genre_name, :prompt => "Genre:" %><br>
+  <%= f.submit %></div>
+<% end %>

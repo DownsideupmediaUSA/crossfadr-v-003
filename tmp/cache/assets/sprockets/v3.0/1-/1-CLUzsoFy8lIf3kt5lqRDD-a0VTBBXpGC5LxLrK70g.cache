@@ -1,0 +1,29 @@
+{:uriI"„file://app/assets/javascripts/main/navbar.html?type=text/ng-html&id=352140ec68ab869b8a3a880db400ead1a3c7e0bf2c8a2317f860f9e3cd569180:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/main/navbar.html;T:	nameI"main/navbar;T:logical_pathI"main/navbar.html;T:content_typeI"text/ng-html;T:sourceI"(<div class="ui pointing menu">
+  <a class="active item">
+    Home
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+  <div class="right menu" id="abId0.43591901674613154">
+    <div class="item" id="abId0.5321512046600605">
+      <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui segment">
+  <p></p>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/main/navbar.html;TT:charsetI"
+utf-8;F:digest"%½Z•Ê¸CR+Şï`Ô±£Äª/7µËÛdÌ‹¿‹°ŞY:lengthi(:dependencies_digest"%	
+8>S(¢‹
+0·«a$o ²O·^8[öİµ	.¹d:idI"E352140ec68ab869b8a3a880db400ead1a3c7e0bf2c8a2317f860f9e3cd569180;F:
+mtimel+ò·×X
