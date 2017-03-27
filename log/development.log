@@ -1,0 +1,362 @@
+Started GET "/mixes" for ::1 at 2017-03-27 12:32:55 -0400
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+  activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+  activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/a30e5dc3053a26dd/variables" for ::1 at 2017-03-27 12:32:56 -0400
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170322130837)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170322130837"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUsernameToUsers (20170322131201)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170322131201"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDjs (20170322132100)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "djs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dj_name" varchar, "dj_image_file_name" varchar, "dj_image_content_type" varchar, "dj_image_file_size" integer, "dj_image_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170322132100"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMixes (20170322132353)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "mixes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mix_title" varchar, "dj_id" integer, "genre_id" integer, "mp3_url" varchar, "mix_mp3_file_name" varchar, "mix_mp3_content_type" varchar, "mix_mp3_file_size" integer, "mix_mp3_updated_at" datetime, "mix_image_file_name" varchar, "mix_image_content_type" varchar, "mix_image_file_size" integer, "mix_image_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170322132353"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGenres (20170322132611)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "genres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "genre_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170322132611"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSharedMixes (20170325165322)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "shared_mixes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mix_id" integer, "user_id" integer, "dj_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170325165322"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLikedMixes (20170325165419)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "liked_mixes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mix_id" integer, "user_id" integer, "dj_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170325165419"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-27 16:33:16 UTC], ["updated_at", 2017-03-27 16:33:16 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/genres/new" for ::1 at 2017-03-27 12:34:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GenresController#new as HTML
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (67.5ms)
+Started GET "/genres/new" for ::1 at 2017-03-27 12:34:40 -0400
+Completed 200 OK in 1179ms (Views: 1146.1ms | ActiveRecord: 1.1ms)
+
+
+Processing by GenresController#new as HTML
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 51.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/genres" for ::1 at 2017-03-27 12:35:39 -0400
+Processing by GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQuJ/2nA2ObhAFouN0890ueFTi9mgYG+cbJ8sL8QF5K5BEGgAbGNruS2+YeO/kEzN0kvJ9WT6sRgR3sLggQKcw==", "genre"=>{"genre_name"=>"Techno"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "genres" ("genre_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["genre_name", "Techno"], ["created_at", 2017-03-27 16:35:39 UTC], ["updated_at", 2017-03-27 16:35:39 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/genres
+Completed 302 Found in 17ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/genres" for ::1 at 2017-03-27 12:35:39 -0400
+Processing by GenresController#index as HTML
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/genres/new" for ::1 at 2017-03-27 12:35:45 -0400
+Processing by GenresController#new as HTML
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/genres" for ::1 at 2017-03-27 12:35:53 -0400
+Processing by GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+b9v0LSfQERr88xoo9aKu2KON4Z/KhP3SFUT/+Jz7f7BsKeP3O4VDG5Fb8EaZ/ZaskJWjsw4eI1ZoBRE32fwHw==", "genre"=>{"genre_name"=>"House"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "genres" ("genre_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["genre_name", "House"], ["created_at", 2017-03-27 16:35:53 UTC], ["updated_at", 2017-03-27 16:35:53 UTC]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/genres
+Completed 302 Found in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/genres" for ::1 at 2017-03-27 12:35:53 -0400
+Processing by GenresController#index as HTML
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/genres/new" for ::1 at 2017-03-27 12:36:03 -0400
+Processing by GenresController#new as HTML
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/djs/new" for ::1 at 2017-03-27 12:36:10 -0400
+Processing by DjsController#new as HTML
+  Rendering djs/new.html.erb within layouts/application
+  Rendered djs/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 188ms (Views: 168.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/djs" for ::1 at 2017-03-27 12:36:26 -0400
+Processing by DjsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlzBno8YqOnvzReju1ysUYX6ywAagq4q/b7YqfacHcoSUwnB52n9oep7tAoC7dCwVTaqCKmQxVDsS98Sy4gAKw==", "dj"=>{"dj_image"=>#<ActionDispatch::Http::UploadedFile:0x007f82a4987cd0 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-1e0zpv3.jpg>, @original_filename="10425099_10153431622101592_6495704294605708847_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"dj[dj_image]\"; filename=\"10425099_10153431622101592_6495704294605708847_n.jpg\"\r\nContent-Type: image/jpeg\r\n">, "dj_name"=>"Brandon De Carlo"}, "commit"=>"Create Dj"}
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-biv55i.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]' -auto-orient -resize "550x550>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/f178143b27f567ad3e2faf3adeae71f720170327-95701-1ok2fcz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1xdyj90.jpg[0]' -auto-orient -resize "150x150" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/f178143b27f567ad3e2faf3adeae71f720170327-95701-qpj975'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1l6du9p.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "djs" ("dj_name", "dj_image_file_name", "dj_image_content_type", "dj_image_file_size", "dj_image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["dj_name", "Brandon De Carlo"], ["dj_image_file_name", "10425099_10153431622101592_6495704294605708847_n.jpg"], ["dj_image_content_type", "image/jpeg"], ["dj_image_file_size", 81160], ["dj_image_updated_at", 2017-03-27 16:36:26 UTC], ["created_at", 2017-03-27 16:36:27 UTC], ["updated_at", 2017-03-27 16:36:27 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/djs
+Completed 302 Found in 552ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/djs" for ::1 at 2017-03-27 12:36:27 -0400
+Processing by DjsController#index as HTML
+  Rendering djs/index.html.erb within layouts/application
+  [1m[36mDj Load (0.3ms)[0m  [1m[34mSELECT "djs".* FROM "djs"[0m
+  Rendered djs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixes/new" for ::1 at 2017-03-27 12:37:14 -0400
+Processing by MixesController#new as HTML
+  Rendering mixes/new.html.erb within layouts/application
+  [1m[36mDj Load (0.2ms)[0m  [1m[34mSELECT "djs".* FROM "djs"[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered mixes/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 170ms (Views: 53.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/mixes" for ::1 at 2017-03-27 12:38:58 -0400
+Processing by MixesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WcDpfNrWPJCSh1/nxzM165xOp8dSgGYKQLnK5RgFv5VhzyEjsqdp2Jcx/E5+gkkKTILGz+GSDXBRTM1eJRGidA==", "mix"=>{"mix_image"=>#<ActionDispatch::Http::UploadedFile:0x007f82a5860860 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-qh6cw.jpg>, @original_filename="10425099_10153431622101592_6495704294605708847_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"mix[mix_image]\"; filename=\"10425099_10153431622101592_6495704294605708847_n.jpg\"\r\nContent-Type: image/jpeg\r\n">, "mix_mp3"=>#<ActionDispatch::Http::UploadedFile:0x007f82a5860810 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-jv26s.mp3>, @original_filename="BrandonDeCarlo_aporia_16bitmasterA 2.91dbdry.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"mix[mix_mp3]\"; filename=\"BrandonDeCarlo_aporia_16bitmasterA+2.91dbdry.mp3\"\r\nContent-Type: audio/mp3\r\n">, "mix_title"=>"Aporia", "dj_id"=>"1", "genre_id"=>"2"}, "commit"=>"Create Mix"}
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/bb47c01ca6abf06db248bf6bab01d81520170327-95701-16xql0u.mp3'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-qwftl8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/c3c943df6590405357675a6e6c57265220170327-95701-ss3t53'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/c3c943df6590405357675a6e6c57265220170327-95701-arcr28'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-1evyj59.jpg[0]' -auto-orient -resize "150x" -crop "150x150+0+0" +repage '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/c3c943df6590405357675a6e6c57265220170327-95701-15s0ujk'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/32f02888938b074706a780dfc998a33020170327-95701-11w0qsv.jpg'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/bb47c01ca6abf06db248bf6bab01d81520170327-95701-lrwqp1.mp3'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "mixes" ("mix_title", "dj_id", "genre_id", "mix_mp3_file_name", "mix_mp3_content_type", "mix_mp3_file_size", "mix_mp3_updated_at", "mix_image_file_name", "mix_image_content_type", "mix_image_file_size", "mix_image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mix_title", "Aporia"], ["dj_id", 1], ["genre_id", 2], ["mix_mp3_file_name", "BrandonDeCarlo_aporia_16bitmasterA_2.91dbdry.mp3"], ["mix_mp3_content_type", "audio/mp3"], ["mix_mp3_file_size", 5883261], ["mix_mp3_updated_at", 2017-03-27 16:38:58 UTC], ["mix_image_file_name", "10425099_10153431622101592_6495704294605708847_n.jpg"], ["mix_image_content_type", "image/jpeg"], ["mix_image_file_size", 81160], ["mix_image_updated_at", 2017-03-27 16:38:58 UTC], ["created_at", 2017-03-27 16:38:58 UTC], ["updated_at", 2017-03-27 16:38:58 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mixes/1
+Completed 302 Found in 676ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/mixes/1" for ::1 at 2017-03-27 12:38:58 -0400
+Processing by MixesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMix Load (0.4ms)[0m  [1m[34mSELECT  "mixes".* FROM "mixes" WHERE "mixes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering mixes/show.html.erb within layouts/application
+  Rendered mixes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 66ms (Views: 54.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixes/new" for ::1 at 2017-03-27 12:39:06 -0400
+Processing by MixesController#new as HTML
+  Rendering mixes/new.html.erb within layouts/application
+  [1m[36mDj Load (0.2ms)[0m  [1m[34mSELECT "djs".* FROM "djs"[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered mixes/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/mixes" for ::1 at 2017-03-27 12:40:00 -0400
+Processing by MixesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4g7L5XCtW5WZuefF2ewtGjT+wpVztembVopCjsipLv/aAQO6GNwO3ZwPRGxgXVH75DKjncCnguFHf0U19b0zHg==", "mix"=>{"mix_image"=>#<ActionDispatch::Http::UploadedFile:0x007f82a42d11c0 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-w7z3zs.jpg>, @original_filename="cloudNineEP.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"mix[mix_image]\"; filename=\"cloudNineEP.jpg\"\r\nContent-Type: image/jpeg\r\n">, "mix_mp3"=>#<ActionDispatch::Http::UploadedFile:0x007f82a42d1170 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-1djfw31.mp3>, @original_filename="BrandonDeCarlo_Cloud_Nine(2012)_MasterB.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"mix[mix_mp3]\"; filename=\"BrandonDeCarlo_Cloud_Nine(2012)_MasterB.mp3\"\r\nContent-Type: audio/mp3\r\n">, "mix_title"=>"Cloud Nine", "dj_id"=>"1", "genre_id"=>"2"}, "commit"=>"Create Mix"}
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/8deb06d1c87ce2c67f7042f0c333039020170327-95701-1samq17.mp3'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-1cp8hxy.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3b2195260ddda63b775e4bdc28760e3720170327-95701-1xve1u5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3b2195260ddda63b775e4bdc28760e3720170327-95701-17acmzw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-68nx51.jpg[0]' -auto-orient -resize "150x" -crop "150x150+0+0" +repage '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3b2195260ddda63b775e4bdc28760e3720170327-95701-rxy03c'
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/20b0bd182aa7b1c29cbcbb2c0e6e0b1a20170327-95701-iudtwe.jpg'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/8deb06d1c87ce2c67f7042f0c333039020170327-95701-muk2mt.mp3'
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "mixes" ("mix_title", "dj_id", "genre_id", "mix_mp3_file_name", "mix_mp3_content_type", "mix_mp3_file_size", "mix_mp3_updated_at", "mix_image_file_name", "mix_image_content_type", "mix_image_file_size", "mix_image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mix_title", "Cloud Nine"], ["dj_id", 1], ["genre_id", 2], ["mix_mp3_file_name", "BrandonDeCarlo_Cloud_Nine(2012)_MasterB.mp3"], ["mix_mp3_content_type", "audio/mp3"], ["mix_mp3_file_size", 7805033], ["mix_mp3_updated_at", 2017-03-27 16:40:00 UTC], ["mix_image_file_name", "cloudNineEP.jpg"], ["mix_image_content_type", "image/jpeg"], ["mix_image_file_size", 43829], ["mix_image_updated_at", 2017-03-27 16:40:00 UTC], ["created_at", 2017-03-27 16:40:00 UTC], ["updated_at", 2017-03-27 16:40:00 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mixes/2
+Completed 302 Found in 737ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/mixes/2" for ::1 at 2017-03-27 12:40:01 -0400
+Processing by MixesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMix Load (1.1ms)[0m  [1m[34mSELECT  "mixes".* FROM "mixes" WHERE "mixes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering mixes/show.html.erb within layouts/application
+  Rendered mixes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 201ms (Views: 173.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mixes/new" for ::1 at 2017-03-27 12:40:08 -0400
+Processing by MixesController#new as HTML
+  Rendering mixes/new.html.erb within layouts/application
+  [1m[36mDj Load (0.2ms)[0m  [1m[34mSELECT "djs".* FROM "djs"[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered mixes/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/mixes" for ::1 at 2017-03-27 12:41:02 -0400
+Processing by MixesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z+5llOVbOzS29nSNaE9m/sYja5C3NEpXiq+xKtEVau334a3LjSpufLNA1yTR/hofFu8KmAQmIS2bWraR7AF3DA==", "mix"=>{"mix_image"=>#<ActionDispatch::Http::UploadedFile:0x007f82a4355740 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-1ifu8pc.jpg>, @original_filename="17361927_10158337737190175_3106615264996649079_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"mix[mix_image]\"; filename=\"17361927_10158337737190175_3106615264996649079_n.jpg\"\r\nContent-Type: image/jpeg\r\n">, "mix_mp3"=>#<ActionDispatch::Http::UploadedFile:0x007f82a43556f0 @tempfile=#<Tempfile:/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/RackMultipart20170327-95701-1f0036b.mp3>, @original_filename="BrandonDeCarlo_ThoseYearsBetween_MasterA.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"mix[mix_mp3]\"; filename=\"BrandonDeCarlo_ThoseYearsBetween_MasterA.mp3\"\r\nContent-Type: audio/mp3\r\n">, "mix_title"=>"Those Years Between", "dj_id"=>"1", "genre_id"=>"1"}, "commit"=>"Create Mix"}
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/5f00eb3061c2d91505e25487e52e5ac720170327-95701-1jz3p0f.mp3'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-5udys7.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3420182100b35a0e80e88f26cded98c120170327-95701-1h64h7d'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' -auto-orient -resize "600x600>" '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3420182100b35a0e80e88f26cded98c120170327-95701-m7bd6n'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]'
+Command :: convert '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-1vqyyno.jpg[0]' -auto-orient -resize "150x" -crop "150x150+0+0" +repage '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/3420182100b35a0e80e88f26cded98c120170327-95701-1leegyf'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/b8a097eb2c8cbb601696037a7d8916cf20170327-95701-13dwgli.jpg'
+Command :: file -b --mime '/var/folders/pq/bkm8g_4d0_v_5s65h9dm_3tm0000gn/T/5f00eb3061c2d91505e25487e52e5ac720170327-95701-1c5j47p.mp3'
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "mixes" ("mix_title", "dj_id", "genre_id", "mix_mp3_file_name", "mix_mp3_content_type", "mix_mp3_file_size", "mix_mp3_updated_at", "mix_image_file_name", "mix_image_content_type", "mix_image_file_size", "mix_image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mix_title", "Those Years Between"], ["dj_id", 1], ["genre_id", 1], ["mix_mp3_file_name", "BrandonDeCarlo_ThoseYearsBetween_MasterA.mp3"], ["mix_mp3_content_type", "audio/mp3"], ["mix_mp3_file_size", 7406719], ["mix_mp3_updated_at", 2017-03-27 16:41:02 UTC], ["mix_image_file_name", "17361927_10158337737190175_3106615264996649079_n.jpg"], ["mix_image_content_type", "image/jpeg"], ["mix_image_file_size", 39123], ["mix_image_updated_at", 2017-03-27 16:41:02 UTC], ["created_at", 2017-03-27 16:41:03 UTC], ["updated_at", 2017-03-27 16:41:03 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mixes/3
+Completed 302 Found in 581ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/mixes/3" for ::1 at 2017-03-27 12:41:03 -0400
+Processing by MixesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMix Load (0.3ms)[0m  [1m[34mSELECT  "mixes".* FROM "mixes" WHERE "mixes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering mixes/show.html.erb within layouts/application
+  Rendered mixes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixes/3" for ::1 at 2017-03-27 12:43:32 -0400
+Processing by MixesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMix Load (0.1ms)[0m  [1m[34mSELECT  "mixes".* FROM "mixes" WHERE "mixes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering mixes/show.html.erb within layouts/application
+  Rendered mixes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 12:43:59 -0400
+Processing by ApplicationController#home as HTML
+  Rendering layouts/application.html.erb within layouts/application
+  Rendered layouts/application.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 12:44:13 -0400
+Processing by ApplicationController#home as HTML
+  Rendering layouts/application.html.erb within layouts/application
+  Rendered layouts/application.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 155ms (Views: 154.4ms | ActiveRecord: 0.0ms)
+
+
