@@ -1,19 +1,0 @@
-{:uriI"‚file://app/assets/javascripts/main/home.html?type=text/ng-html&id=63f616ff6d3d954d8b5392104d169dafb3f899296e71cded346b9397bc9b0fc7:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/main/home.html;T:	nameI"main/home;T:logical_pathI"main/home.html;T:content_typeI"text/ng-html;T:sourceI"÷
-
-<div class="ui message">
-  <div class="header">
-    <h6>Welcome to...</h6>
-    <p>CROSSFADR</p>
-    <p><a class="ui secondary basic button" href="home.mixes" role="button" >Listen</a></p></button>
-  </div>
-
-</div>
-
-
-<!-- <ui-view></ui-view> -->
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/main/home.html;TT:charsetI"
-utf-8;F:digest"%ß´4Şà!ì˜ÌyCyÃ;)Â·Y8ŒÄ†wßZöA:lengthi÷:dependencies_digest"%%›fX‡;«eN¯™ÿ$û'LT¯b“ å»`CbYx¡:idI"E63f616ff6d3d954d8b5392104d169dafb3f899296e71cded346b9397bc9b0fc7;F:
-mtimel+
-ÙX

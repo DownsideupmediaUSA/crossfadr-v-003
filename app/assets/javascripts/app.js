@@ -14,14 +14,15 @@ app
           templateUrl: 'mixes/mixes.html',
           controller: 'MixCntrl as vm'
         })
-        .state('artists', {
+        .state('home.artists', {
           url:'/artists',
-          templateUrl: 'djs/djs.html',
-          controller: 'DJCntrl as vm'
+          templateUrl: 'artists/artist.html',
+          controller: 'ArtistCntrl as vm'
         })
-        .state('about', {
-          url:'about',
-          templateUrl: 'home/about.html',
+        .state('home.about', {
+          url:'/about',
+          templateUrl: 'static/about.html',
+          controller: 'AboutCntrl as vm'
         })
         .state('contact', {
           url:'contact',
