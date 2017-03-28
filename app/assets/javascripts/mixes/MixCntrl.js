@@ -1,19 +1,16 @@
-// (function() {
-//
-//   'use strict'
-//
-//
-//     angular
-//      .module('crossfadr')
-//      .controller('MixCntrl', ['$stateParams', 'crossfadr',
-//      function($stateParams, crossfadr) {
-//        var vm = this
-//
-//        vm.mixes = []
-//
-//        crossfadr.getMixes()
-//
-//
-//       }])
-//
-//  }());
+(function() {
+
+  'use strict';
+
+    function MixCntrl($scope) {
+      $scope.name = 'this is a pretend mix'
+    }
+
+    MixCntrl.$inject = ['$scope']
+
+
+    angular
+     .module('crossfadr')
+     .controller('MixCntrl', MixCntrl)
+
+ }());
