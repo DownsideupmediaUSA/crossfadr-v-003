@@ -1,0 +1,43 @@
+{:uriI"‚file://app/assets/javascripts/main/home.html?type=text/ng-html&id=e782b032f78aa09ee7f8894ed07ff2e34568287c77d4a5720c2a22b0e97352f4:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/main/home.html;T:	nameI"main/home;T:logical_pathI"main/home.html;T:content_typeI"text/ng-html;T:sourceI"l<div class="ui pointing menu">
+<a class="active item">
+    Home
+  </a>
+  <a class="item">
+    Artists
+  </a>
+  <a class="item">
+    Tracks
+  </a>
+  <a class="item">
+    About
+  </a>
+  <a class="item">
+    Contact
+  </a>
+  <div class="right menu" id="abId0.43591901674613154">
+    <div class="item" id="abId0.5321512046600605">
+      <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+        <input type="text" placeholder="Search Me...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui message">
+  <div class="header">
+    <h6>Welcome to...</h6>
+    <p>CROSSFADR</p>
+    <h6>Your source for Underground Dance Musice</h6>
+    <p><a class="ui secondary basic button" href="mixes/mixes" role="button"  >Listen</a></p></button>
+  </div>
+
+</div>
+
+
+<ui-view></ui-view>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/main/home.html;TT:charsetI"
+utf-8;F:digest"%°ã¶HTÕoy"m=¡ÛWÅG‰š¼®v4Åº9QL[ü:lengthil:dependencies_digest"%ÄspOE½²yô‚T^|¾×oJ>Ã8´»¹ü¦yo:idI"Ee782b032f78aa09ee7f8894ed07ff2e34568287c77d4a5720c2a22b0e97352f4;F:
+mtimel+¸sÚX

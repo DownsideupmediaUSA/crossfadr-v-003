@@ -1,15 +1,8 @@
-(function() {
+app.controller("MainCtrl", MainCtrl)
 
 
 
-function MainCtrl($scope) {
-  $scope.name = 'home';
+function MainCtrl( ) {
+
 
 }
-
- 
-angular
- .module('crossfadr')
- .controller("MainCtrl", MainCtrl)
-
- }());

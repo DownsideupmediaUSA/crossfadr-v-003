@@ -2,7 +2,6 @@ var app = angular.module('crossfadr', ['ui.router', 'templates'])
 
 app
    .config(function($stateProvider, $urlRouterProvider) {
-  
     $stateProvider
     .state('home', {
       url:'/home',

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "application#index"
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   get 'dj/index'
-  root "application#home"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     get 'api/comments', to: 'comments#api_index'
     get 'api/mixes', to: 'mixes#api_index'
