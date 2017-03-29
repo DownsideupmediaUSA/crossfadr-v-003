@@ -2,23 +2,26 @@
   'use strict'
 
   angular
-  .module('crossfadr')
-  .factory('MixesFactory', ['$http', function($http) {
+      .module('crossfadr')
+      .factory('MixesFactory', ['$http', function($http) {
 
 
-      return {
-        getMixes: getMixes,
-      
-      }
+          return {
+            getMixes: getMixes,
+            getMix: getMix,
+          }
 
-    function getMixes() {
-      return $http.get('/api/mixes')
-                  .then(handleResponse)
+        function getMixes() {
+            return $http.get('/api/mixes')
+                        .then(handleResponse)
 
-      function handleResponse(response) {
-        console.log(response)
-      }
-    }
+            function handleResponse(response) {
+              return response.data
+            }
+        }
 
-  }])
+        function getMix() {}
+
+
+      }])
 }())

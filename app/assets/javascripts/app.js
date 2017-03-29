@@ -7,22 +7,22 @@ app
         .state('home', {
           url:'/home',
           templateUrl: 'main/home.html',
-          controller: 'MainCtrl as vm'
+          controller: 'MainCtrl as ctrl'
         })
         .state('home.tracks', {
           url:'/tracks',
           templateUrl: 'mixes/mixes.html',
-          controller: 'MixCntrl as vm'
+          controller: 'MixCntrl as ctrl'
         })
         .state('home.artists', {
           url:'/artists',
           templateUrl: 'artists/artist.html',
-          controller: 'ArtistCntrl as vm'
+          controller: 'ArtistCntrl as ctrl'
         })
         .state('home.about', {
           url:'/about',
           templateUrl: 'static/about.html',
-          controller: 'AboutCntrl as vm'
+          controller: 'AboutCntrl as ctrl'
         })
         .state('contact', {
           url:'contact',

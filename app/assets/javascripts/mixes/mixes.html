@@ -1,1 +1,9 @@
-<h3>{{ name }}</h3>
+<h4>Mixes</h4>
+<a ng-repeat="mix in vm.mixes" href="#" ui-sref="mixes.detail({ mixTitle: vm.replaceSpaces(mix.mix_title), mixId: mix.id })">
+ <div>
+   <h4 ng-bind="mix.mix_title"></h4>
+   <p>
+     {{mix.mix_title}}
+   </p>
+ </div>
+</a>
