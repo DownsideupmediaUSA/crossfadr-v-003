@@ -14,6 +14,14 @@ Rails.application.routes.draw do
     get 'api/mixes/:id', to: 'mixes#api_show'
     # get '/assets/js/underscore.js'
 
+
+
+ #  namespace :api, defaults: {format: :json} do
+ #   resources :mixes do
+ #     resources :comments, only: [:create]
+ #   end
+ # end
+
   resources :mixes, only: [:index, :show, :new, :create, :edit, :update ] do
     resources :comments
   end

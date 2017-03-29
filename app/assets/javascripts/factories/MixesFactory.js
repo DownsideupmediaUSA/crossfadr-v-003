@@ -3,12 +3,12 @@
 
   angular
   .module('crossfadr')
-  .factory('mixesFactory', ['$http', function($http){
+  .factory('MixesFactory', ['$http', function($http) {
 
 
       return {
-        getmixes: getmixes,
-        getMix: getMix
+        getMixes: getMixes,
+      
       }
 
     function getMixes() {
