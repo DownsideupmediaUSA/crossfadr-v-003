@@ -16,4 +16,5 @@
 //= require angular-rails-templates
 //= require semantic
 //= require moment
+//= require jplayer
 //= require_tree .

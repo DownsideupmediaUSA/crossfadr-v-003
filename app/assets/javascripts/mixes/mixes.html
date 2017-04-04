@@ -1,9 +1,36 @@
 <h4>Mixes</h4>
-<a ng-repeat="mix in vm.mixes" href="#" ui-sref="mixes.detail({ mixTitle: vm.replaceSpaces(mix.mix_title), mixId: mix.id })">
- <div>
+
+<div class="ui card" >
+
+  <div ng-repeat="mix in mixes" class="content">
+    <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), MixId: mix.id})">
+     <div class="meta">
+       <div class="image">
+
+         <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:300px;height:300px;" alt="">
+       </div>
+       release date
+     </div>
+     <div class="description">
+       track title
+     </div>
+  </div>
+
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      #of likes/ retweets go here
+    </a>
+  </div>
+</div>
+<!-- <a ng-repeat="mix in vm.mixes" href="#" >
+
    <h4 ng-bind="mix.mix_title"></h4>
    <p>
      {{mix.mix_title}}
    </p>
- </div>
-</a>
+ </a>
+
+   <div class="main_content">
+     <ui-view></ui-view>
+   </div> -->

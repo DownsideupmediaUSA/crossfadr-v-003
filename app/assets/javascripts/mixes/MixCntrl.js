@@ -4,12 +4,12 @@
 
   angular
      .module('crossfadr')
-     .controller('MixCntrl', ['$stateParams', 'MixesFactory',
-     function($stateParams, MixesFactory ) {
+     .controller('MixCntrl', ['$stateParams', 'MixesFactory', '$scope',
+     function($stateParams, MixesFactory, $scope ) {
 
      var vm = this
 
-     vm.mixes = []
+     $scope.mixes = []
 
      vm.replaceSpaces = replaceSpaces
 
@@ -17,7 +17,7 @@
                  .then(setMixes)
 
      function setMixes(data) {
-       vm.mixes = data
+       $scope.mixes = data.data
        console.log(data)
      }
 
