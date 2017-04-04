@@ -1,18 +1,19 @@
 <h4>Mixes</h4>
+<section class="mix-card">
+
 
 <div class="ui card" >
 
   <div ng-repeat="mix in mixes" class="content">
-    <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), MixId: mix.id})">
-     <div class="meta">
+    <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ djId: dj.dj_id, djName: replaceSpaces(dj.dj_name), dj.dj_name, mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+     <div ng-view="mix" class="meta">
        <div class="image">
 
-         <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:300px;height:300px;" alt="">
+         <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt="">
        </div>
-       release date
-     </div>
-     <div class="description">
-       track title
+       <div class="mix-info">
+       {{mix.mix_title}}
+       {{dj.dj_name}}
      </div>
   </div>
 
@@ -22,15 +23,40 @@
       #of likes/ retweets go here
     </a>
   </div>
-</div>
-<!-- <a ng-repeat="mix in vm.mixes" href="#" >
+</div><!--Card-->
+</section>
 
-   <h4 ng-bind="mix.mix_title"></h4>
-   <p>
-     {{mix.mix_title}}
-   </p>
- </a>
+<!-- block -->
 
-   <div class="main_content">
-     <ui-view></ui-view>
-   </div> -->
+<!-- <div class="ui card">
+  <div  ng-repeat="mix in mixes" class="content">
+  <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ djId: dj.dj_id, mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+    <div class="header">Project Timeline</div>
+  </div>
+  <div class="content">
+    <h4 class="ui sub header">Activity</h4>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Helen Troy</a> added two pictures
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="extra content"> -->
