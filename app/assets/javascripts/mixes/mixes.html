@@ -1,62 +1,26 @@
 <h4>Mixes</h4>
+
 <section class="mix-card">
+    <div class="ui card" >
+      <div ng-repeat="mix in mixes" class="content">
+        <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+         <div ng-view="mix" class="meta">
+           <div class="image">
+             <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
+              <div class="mix-info" >
+               <h3>{{mix.mix_title}}</h3>
+               <h5>{{mix.dj.dj_name}}</h5>
+              </div>
+              <div class="container">
 
-
-<div class="ui card" >
-
-  <div ng-repeat="mix in mixes" class="content">
-    <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ djId: dj.dj_id, djName: replaceSpaces(dj.dj_name), dj.dj_name, mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
-     <div ng-view="mix" class="meta">
-       <div class="image">
-
-         <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt="">
-       </div>
-       <div class="mix-info">
-       {{mix.mix_title}}
-       {{dj.dj_name}}
-     </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      #of likes/ retweets go here
-    </a>
-  </div>
-</div><!--Card-->
+              </div>
+           </div>
+         <div class="extra content">
+           <a>
+             <i class="thumbs outline up icon"></i>
+           </a>
+        </div>
+       </div><!--Card-->
 </section>
 
 <!-- block -->
-
-<!-- <div class="ui card">
-  <div  ng-repeat="mix in mixes" class="content">
-  <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ djId: dj.dj_id, mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
-    <div class="header">Project Timeline</div>
-  </div>
-  <div class="content">
-    <h4 class="ui sub header">Activity</h4>
-    <div class="ui small feed">
-      <div class="event">
-        <div class="content">
-          <div class="summary">
-             <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-          </div>
-        </div>
-      </div>
-      <div class="event">
-        <div class="content">
-          <div class="summary">
-             <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-          </div>
-        </div>
-      </div>
-      <div class="event">
-        <div class="content">
-          <div class="summary">
-             <a>Helen Troy</a> added two pictures
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="extra content"> -->
