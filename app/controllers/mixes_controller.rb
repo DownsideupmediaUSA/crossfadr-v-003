@@ -12,6 +12,7 @@ class MixesController < ApplicationController
   end
 
   def api_show
+    @mix = Mix.find(params[:id])
     render json: @mix
   end
 

@@ -20,7 +20,13 @@
             // }
         }
 
-        function getMix() {}
+        function getMix(id) {
+          return $http.get('/api/mixes/' + id)
+                      .then(handleResponse)
+        }
+        function handleResponse(response) {
+          return response.data
+        }
 
 
       }])

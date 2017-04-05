@@ -3,13 +3,16 @@
 <section class="mix-card">
     <div class="ui card" >
       <div ng-repeat="mix in mixes" class="content">
-        <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+        <a href="/#/mixes/detail" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle:
+           replaceSpaces(mix.mix_title), mixId: mix.id})">
          <div ng-view="mix" class="meta">
            <div class="image">
              <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
               <div class="mix-info" >
-               <h3>{{mix.mix_title}}</h3>
-               <h5>{{mix.dj.dj_name}}</h5>
+                <ng-mouseover ng-mouseover="expression">
+                  <h3>{{mix.mix_title}}</h3>
+                  <h5>{{mix.dj.dj_name}}</h5>
+                </ng-mouseover>
               </div>
               <div class="container">
 
