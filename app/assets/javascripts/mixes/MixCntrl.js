@@ -11,6 +11,7 @@
 
      $scope.mixes = []
 
+
      vm.replaceSpaces = replaceSpaces
 
      MixesFactory.getMixes()
@@ -25,6 +26,10 @@
        return string.replace(/\s/g, '-')
 
      }
+
+     $scope.plusOne = function(index) {
+       $scope.mixes[index].liked_mixes += 1;
+     };
 
 
      }])
