@@ -25,7 +25,7 @@
                       .then(handleResponse)
         }
         function handleResponse(response) {
-          return response.data
+          
         }
 
 

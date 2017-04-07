@@ -2,31 +2,31 @@
 
   'use strict';
 
-  angular
-     .module('crossfadr')
-     .controller('MixDetailCntrl', ['$stateParams', 'MixesFactory', '$scope',
-     function($stateParams, MixesFactory, $scope ) {
-
-     var vm = this
-
-     $scope.mix = []
-
-     vm.replaceSpaces = replaceSpaces
-
-    //  MixesFactory.getMix()
-    //              .then(setMix)
-     //
-    //  function setMix(data) {
-    //    $scope.mixes = data
-    //    console.log(data)
-    //  }
-     //
-    //  function replaceSpaces(string) {
-    //    return string.replace(/\s/g, '-')
-     //
-    //  }
-
-
-     }])
+  // angular
+  //    .module('crossfadr')
+  //    .controller('MixDetailCntrl', ['$stateParams', 'MixesFactory', '$scope',
+  //    function($stateParams, MixesFactory, $scope ) {
+  //
+  //    var vm = this
+  //
+  //    $scope.mix = []
+  //
+  //    vm.replaceSpaces = replaceSpaces
+  //
+  //    MixesFactory.getMix()
+  //                .then(setMix)
+  //    //
+  //    function setMix(data) {
+  //      $scope.mixes = data.data
+  //      console.log(data)
+  //    }
+  //    //
+  //    function replaceSpaces(string) {
+  //      return string.replace(/\s/g, '-')
+  //
+  //    }
+  //
+  //
+  //    }])
 
  }())

@@ -3,26 +3,31 @@
 <section class="mix-card">
     <div class="ui card" >
       <div ng-repeat="mix in mixes" class="content">
-        <a href="/#/mixes/detail" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle:
-           replaceSpaces(mix.mix_title), mixId: mix.id})">
+        <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.mixes({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
          <div ng-view="mix" class="meta">
            <div class="image">
              <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
-              <div class="mix-info" >
-                <ng-mouseover ng-mouseover="expression">
+              <div class="mix-info">
                   <h3>{{mix.mix_title}}</h3>
+              </div>
+              <div class="likes">
+                <a>
+                  <i class="thumbs outline up icon">{{mix.liked_mixes}}</i>
+                </a>
+              </div>
                   <h5>{{mix.dj.dj_name}}</h5>
-                </ng-mouseover>
+
+
               </div>
               <div class="container">
 
               </div>
            </div>
-         <div class="extra content">
+         <!-- <div class="extra-content">
            <a>
-             <i class="thumbs outline up icon"></i>
+             <i class="thumbs outline up icon">{{mix.liked_mixes}}</i>
            </a>
-        </div>
+        </div> -->
        </div><!--Card-->
 </section>
 

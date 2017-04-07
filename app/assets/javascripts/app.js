@@ -14,11 +14,6 @@ app
           templateUrl: 'mixes/mixes.html',
           controller: 'MixCntrl as ctrl'
         })
-        .state('home.tracks.detail', {
-          url:'/:mixTitle?mixId',
-          templateUrl: 'mixes/detail.html',
-          controller: 'MixDetailCntrl as ctrl'
-        })
         .state('home.artists', {
           url:'/artists',
           templateUrl: 'artists/artist.html',
