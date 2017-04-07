@@ -28,7 +28,7 @@
      }
 
      $scope.plusOne = function(index) {
-       $scope.mixes[index].liked_mixes += 1;
+       $scope.mixes[index].liked_mixes +=1;
      };
 
 
