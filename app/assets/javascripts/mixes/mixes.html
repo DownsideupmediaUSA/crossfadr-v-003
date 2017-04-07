@@ -5,6 +5,9 @@
       <div ng-repeat="mix in mixes | filter:searchBox" class="content">
         <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
          <div ng-view="mix" class="meta">
+           <div class="dj-card">
+
+
            <div class="image">
              <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
               <div class="mix-info">
@@ -12,7 +15,7 @@
               </div>
               <div class="likes">
                 <a>
-                  <i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes}}
+                  <i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}
                 </a>
               </div>
                   <h5>{{mix.dj.dj_name}}</h5>
@@ -20,7 +23,7 @@
 
               </div>
               <div class="container">
-
+                </div>
               </div>
            </div>
          <!-- <div class="extra-content">
