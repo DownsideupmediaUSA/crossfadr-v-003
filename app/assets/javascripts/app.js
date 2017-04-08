@@ -24,9 +24,10 @@ app
           templateUrl: 'static/about.html',
           controller: 'AboutCntrl as ctrl'
         })
-        .state('contact', {
-          url:'contact',
-          templateUrl: 'home/contact.html',
+        .state('home.contact', {
+          url:'/contact',
+          templateUrl: 'main/contact.html',
+          controller: 'contactCtrl as ctrl'
         });
 
     $urlRouterProvider.otherwise('/home');
