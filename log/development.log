@@ -24420,3 +24420,65 @@ Processing by MixesController#api_index as HTML
 Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for ::1 at 2017-04-07 17:33:20 -0400
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/mixes" for ::1 at 2017-04-07 17:33:21 -0400
+Processing by MixesController#api_index as HTML
+  [1m[36mMix Load (0.2ms)[0m  [1m[34mSELECT "mixes".* FROM "mixes"[0m
+[active_model_serializers]   [1m[36mDj Load (0.2ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.2ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.02ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 17:37:25 -0400
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/mixes" for ::1 at 2017-04-07 17:37:27 -0400
+Processing by MixesController#api_index as HTML
+  [1m[36mMix Load (0.3ms)[0m  [1m[34mSELECT "mixes".* FROM "mixes"[0m
+[active_model_serializers]   [1m[36mDj Load (0.2ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.68ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/mixes" for ::1 at 2017-04-07 19:11:04 -0400
+Processing by MixesController#api_index as HTML
+  [1m[36mMix Load (0.3ms)[0m  [1m[34mSELECT "mixes".* FROM "mixes"[0m
+[active_model_serializers]   [1m[36mDj Load (0.1ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.2ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 2]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "djs".* FROM "djs" WHERE "djs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mLikedMix Load (0.1ms)[0m  [1m[34mSELECT "liked_mixes".* FROM "liked_mixes" WHERE "liked_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers]   [1m[36mSharedMix Load (0.1ms)[0m  [1m[34mSELECT "shared_mixes".* FROM "shared_mixes" WHERE "shared_mixes"."mix_id" = ?[0m  [["mix_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (40.35ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 1.4ms)
+
+
