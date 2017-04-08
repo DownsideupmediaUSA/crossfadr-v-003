@@ -1,34 +1,0 @@
-{:uriI"„file://app/assets/javascripts/mixes/mixes.html?type=text/ng-html&id=e524ea0023919c95b48a0719ea9961383d181867ec3e38850f52974f6464728b:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/mixes/mixes.html;T:	nameI"mixes/mixes;T:logical_pathI"mixes/mixes.html;T:content_typeI"text/ng-html;T:sourceI"º<h4>Mixes</h4>
-
-<section class="mix-card">
-    <div class="ui card" >
-      <div ng-repeat="mix in mixes" class="content">
-        <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle:
-           replaceSpaces(mix.mix_title), mixId: mix.id})">
-         <div ng-view="mix" class="meta">
-           <div class="image">
-             <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
-              <div class="mix-info" >
-                <ng-mouseover ng-mouseover="expression">
-                  <h3>{{mix.mix_title}}</h3>
-                  <h5>{{mix.dj.dj_name}}</h5>
-                </ng-mouseover>
-              </div>
-              <div class="container">
-
-              </div>
-           </div>
-         <div class="extra content">
-           <a>
-             <i class="thumbs outline up icon"></i>
-           </a>
-        </div>
-       </div><!--Card-->
-</section>
-
-<!-- block -->
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/mixes/mixes.html;TT:charsetI"
-utf-8;F:digest"%F’,6ÞB©n±åréhÆ†NCˆ¡K.µOŸtUQ˜ø%x:lengthiº:dependencies_digest"%ÙÜ!#s‚àVERv-/›‚èâŸ·,-CªÞÖ:idI"Ee524ea0023919c95b48a0719ea9961383d181867ec3e38850f52974f6464728b;F:
-mtimel+Œ+åX

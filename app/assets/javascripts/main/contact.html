@@ -1,8 +1,12 @@
+For demo submission inquiries:
 <div ng-controller="contactCtrl">
     <form name="messageForm" ng-submit="submitForm()">
         <div class="form-group">
-            <label>Name</label>
-            <input type="text" name="content" class="form-control" ng-model="message.content">
+            <br>
+          <p> email:
+        <input type='email' validate-email name='email' id='email' ng-model='email' required></p>
+            message:
+            <textarea name="content" class="form-control" ng-model="message.content"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
