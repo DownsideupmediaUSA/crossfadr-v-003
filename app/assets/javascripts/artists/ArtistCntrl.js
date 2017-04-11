@@ -7,27 +7,25 @@
      .controller('ArtistCntrl', ['$stateParams', 'DjsFactory', '$scope',
      function($stateParams, DjsFactory, $scope ) {
 
-     var vm = this
+         var vm = this
+         $scope.djs = []
+         vm.replaceSpaces = replaceSpaces
 
-     $scope.djs = []
+         DjsFactory.getDjs()
+                     .then(setDjs)
 
-     vm.replaceSpaces = replaceSpaces
+                     function setDjs(data) {
+                       $scope.djs = data.data
+                       console.log(data)
+                     }
 
-     DjsFactory.getDjs()
-                 .then(setDjs)
+                     function replaceSpaces(string) {
+                       return string.replace(/\s/g, '-')
+                     }
 
-     function setDjs(data) {
-       $scope.djs = data.data
-       console.log(data)
-     }
-
-     function replaceSpaces(string) {
-       return string.replace(/\s/g, '-')
-     }
-
-     $scope.plusOne = function(index) {
-       $scope.djs[index].liked_djs += 1;
-     };
+                     $scope.plusOne = function(index) {
+                       $scope.djs[index].liked_djs += 1;
+                     };
 
 
      }])

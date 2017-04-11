@@ -10,10 +10,9 @@
       function($stateParams, MixesFactory, $scope ) {
 
 
-           var vm = this;
+           var vm = this
            $scope.mix = []
            vm.replaceSpaces = replaceSpaces
-
            MixesFactory.getMix()
                        .then(setMix)
 
@@ -27,6 +26,6 @@
                        };
 
 
-});
 
-   }());
+
+   }())
