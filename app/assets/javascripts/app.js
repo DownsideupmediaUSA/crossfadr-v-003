@@ -19,6 +19,12 @@ app
           templateUrl: 'artists/artist.html',
           controller: 'ArtistCntrl as ctrl'
         })
+
+        .state('home.track', {
+          url:'tracks/:id',
+          templateUrl: 'mixes/show.html',
+          controller: 'MixDetailCntrl as ctrl'
+        })
         .state('home.about', {
           url:'/about',
           templateUrl: 'static/about.html',

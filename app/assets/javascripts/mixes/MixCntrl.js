@@ -11,7 +11,6 @@
 
      $scope.mixes = []
 
-
      vm.replaceSpaces = replaceSpaces
 
      MixesFactory.getMixes()
@@ -24,7 +23,6 @@
 
      function replaceSpaces(string) {
        return string.replace(/\s/g, '-')
-
      }
 
      $scope.plusOne = function(index) {

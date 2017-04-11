@@ -1,11 +1,21 @@
 class DjsController < ApplicationController
-before_action :set_dj, only: [:show, :edit, :update, :destroy, :songs_index]
+before_action :set_dj, only: [:show, :edit, :update, :destroy, :api_show]
   def index
     @djs = Dj.all
   end
 
   def new
     @dj = Dj.new
+  end
+
+  def api_index
+    @djs = Dj.all
+    render json: @djs
+  end
+
+  def api_show
+    @dj = Dj.find(params[:id])
+    render json: @dj
   end
 
   def create
@@ -26,7 +36,7 @@ before_action :set_dj, only: [:show, :edit, :update, :destroy, :songs_index]
 
   def set_dj
     @dj = Dj.find(params[:id])
-  end 
+  end
 
   def dj_params
   params.require(:dj).permit(:dj_name, :dj_image)

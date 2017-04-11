@@ -15,6 +15,10 @@ Rails.application.routes.draw do
     # get '/assets/js/underscore.js'
 
 
+    get 'api/djs', to: 'djs#api_index'
+    get 'api/djs/:id', to: 'djs#api_show'
+
+
 
  #  namespace :api, defaults: {format: :json} do
  #   resources :mixes do

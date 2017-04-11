@@ -3,8 +3,9 @@ For demo submission inquiries:
     <form name="messageForm" ng-submit="submitForm()">
         <div class="form-group">
             <br>
-          <p> email:
-        <input type='email' validate-email name='email' id='email' ng-model='email' required></p>
+          <p>     email:
+          <input type="email" name="input" ng-model="text" ng-pattern="emailFormat" required></p>
+
             message:
             <textarea name="content" class="form-control" ng-model="message.content"></textarea>
         </div>

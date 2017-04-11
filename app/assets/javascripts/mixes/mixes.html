@@ -3,7 +3,7 @@
 <section class="mix-card">
     <div class="ui card" >
       <div ng-repeat="mix in mixes | filter:searchBox" class="content">
-        <a href="#" ng-click="getMix(mix.id)" ui-sref="mixes.detail({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+        <a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
          <div ng-view="mix" class="meta">
            <div class="dj-card">
 
