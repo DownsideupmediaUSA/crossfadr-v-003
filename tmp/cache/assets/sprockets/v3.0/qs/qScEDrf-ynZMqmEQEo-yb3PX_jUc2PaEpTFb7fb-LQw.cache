@@ -1,0 +1,28 @@
+{:uriI"„file://app/assets/javascripts/mixes/mixes.html?type=text/ng-html&id=27a154ecb436203f395858204db52f620b12d5ca29123c54a4989df0ab0f2a1d:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/mixes/mixes.html;T:	nameI"mixes/mixes;T:logical_pathI"mixes/mixes.html;T:content_typeI"text/ng-html;T:sourceI"–<h4>Mixes</h4>
+
+<section class="mix-card">
+    <div class="ui card" >
+      <div ng-repeat="mix in mixes | filter:searchBox" class="content">
+        <a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+         <div ng-view="mix" class="meta">
+           <div class="dj-card">
+             <div class="image">
+               <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
+             </div><!--image-->
+             <div class="mix-info">
+               <h3>{{mix.mix_title}}</h3>
+             </div><!--mix-info-->
+              <div class="likes">
+                <a><i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}</a>
+              </div><!--likes-->
+                  <h5>{{mix.dj.dj_name}}</h5>
+      </div><!--Card-->
+</section>
+
+<!-- block -->
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/mixes/mixes.html;TT:charsetI"
+utf-8;F:digest"%2oåışÕB7"'EÜSñŒiu©ÂöÒå
+ê\¾bŠ:lengthi–:dependencies_digest"%Y)ø„c¥‹?õ§ï„œ~ùFòíB»j®B!¿+ü:idI"E27a154ecb436203f395858204db52f620b12d5ca29123c54a4989df0ab0f2a1d;F:
+mtimel+<*îX

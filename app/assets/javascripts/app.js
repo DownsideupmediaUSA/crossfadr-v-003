@@ -2,7 +2,7 @@ var app = angular.module('crossfadr', ['ui.router', 'templates']);
 
 app
    .config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+   function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
           url:'/home',
@@ -19,7 +19,6 @@ app
           templateUrl: 'artists/artist.html',
           controller: 'ArtistCntrl as ctrl'
         })
-
         .state('home.track', {
           url:'/tracks/:id',
           templateUrl: 'mixes/show.html',

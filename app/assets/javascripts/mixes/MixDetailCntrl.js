@@ -11,14 +11,14 @@
 
 
            var vm = this
-           $scope.mixes = []
+           $scope.vm.mixes = []
            vm.replaceSpaces = replaceSpaces
            MixesFactory.getMix(id)
                        .then(setMix)
 
                        function setMix(data) {
                          $scope.mix = data.data
-                         console.log(data)
+                        //  console.log(data)
                        }
 
                        function replaceSpaces(string) {

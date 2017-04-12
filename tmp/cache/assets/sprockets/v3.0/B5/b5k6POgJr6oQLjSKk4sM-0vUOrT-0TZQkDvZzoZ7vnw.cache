@@ -1,0 +1,35 @@
+{:uriI"‚file://app/assets/javascripts/main/home.html?type=text/ng-html&id=b9ad334aced82ed971e0d653f5990c53a67a8bec6a473217fedaf313bdace84d:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/main/home.html;T:	nameI"main/home;T:logical_pathI"main/home.html;T:content_typeI"text/ng-html;T:sourceI"¶<div class="ui secondary menu">
+  <a href="/" class="item" ui-sref-active="active">Home<span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.about"  ui-sref-active="active">About <span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.contact"  ui-sref-active="active">Contact <span class="sr-only"></span></a>
+  <div class="right menu" id="abId0.43591901674613154">
+    <div class="item" id="abId0.5321512046600605">
+      <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+        <input type="text" ng-model="searchBox" placeholder="Search Me...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui raised very padded text container segment1">
+  <div class="ui message">
+    <div class="header">
+      <h6>Welcome to...</h6>
+      <p>CROSSFADR</p>
+      <h6>Your source for the hottest dance music!</h6>
+      <p><a class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Listen<span class="sr-only"></span></a></p></button>
+    </div>
+  </div>
+  <div class="ui raised very padded text container segment 2">
+    <h2 class="ui header"></h2>
+     <div class="ui container">
+       <ui-view></ui-view>
+     </div>
+  </div>
+</div> <!--segment>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/main/home.html;TT:charsetI"
+utf-8;F:digest"%$Ä)ü+’ÑB2ıæüÚëãBàªí=sàÆ«¨xC:lengthi¶:dependencies_digest"%JMí¹%¾Œ	ğ`Š‘Ç£íwÔN‡R¥üXŒ¯£º,t:idI"Eb9ad334aced82ed971e0d653f5990c53a67a8bec6a473217fedaf313bdace84d;F:
+mtimel+/îX
