@@ -3,7 +3,7 @@
   'use strict';
 
 
-  App .module(crossfadr)
+   app.module(crossfadr)
       .directive('jplayer', function() {
         return {
           restrict: 'EA',

@@ -11,9 +11,9 @@
 
 
            var vm = this
-           $scope.mix = []
+           $scope.mixes = []
            vm.replaceSpaces = replaceSpaces
-           MixesFactory.getMix()
+           MixesFactory.getMix(id)
                        .then(setMix)
 
                        function setMix(data) {
@@ -23,8 +23,11 @@
 
                        function replaceSpaces(string) {
                          return string.replace(/\s/g, '-')
+                       }
+                       $scope.plusOne = function(index) {
+                         $scope.mixes[index].liked_mixes += 1;
                        };
-
+      }])
 
 
 

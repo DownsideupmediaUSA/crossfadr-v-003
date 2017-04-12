@@ -6,27 +6,17 @@
         <a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
          <div ng-view="mix" class="meta">
            <div class="dj-card">
-
-
-           <div class="image">
-             <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:150px;height:150px;" alt=""></div>
-           </div>
-           <div class="mix-info">
-              <h3>{{mix.mix_title}}</h3>
-            </div>
+             <div class="image">
+               <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
+             </div><!--image-->
+             <div class="mix-info">
+               <h3>{{mix.mix_title}}</h3>
+             </div><!--mix-info-->
               <div class="likes">
-                <a>
-                  <i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}
-                </a>
-              </div>
+                <a><i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}</a>
+              </div><!--likes-->
                   <h5>{{mix.dj.dj_name}}</h5>
-            
 
-         <!-- <div class="extra-content">
-           <a>
-             <i class="thumbs outline up icon">{{mix.liked_mixes}}</i>
-           </a>
-        </div> -->
        </div><!--Card-->
 </section>
 

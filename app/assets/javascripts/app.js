@@ -21,7 +21,7 @@ app
         })
 
         .state('home.track', {
-          url:'tracks/:id',
+          url:'/tracks/:id',
           templateUrl: 'mixes/show.html',
           controller: 'MixDetailCntrl as ctrl'
         })
