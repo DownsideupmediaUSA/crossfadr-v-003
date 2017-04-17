@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require 'jquery.jplayer'
 //= require angular
 //= require angular-ui-router
 //= require angular-rails-templates
 //= require semantic
 //= require moment
-//= require jplayer
+
 //= require_tree .

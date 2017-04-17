@@ -34,6 +34,12 @@ app
           templateUrl: 'main/contact.html',
           controller: 'contactCtrl as ctrl'
         });
+        .state('home.jplayer', {
+          url:'/jplayer',
+          templateUrl: 'mixes/jplayer.html',
+          controller: 'jPlayerCtrl as ctrl'
+        });
+
 
     $urlRouterProvider.otherwise('/home');
   }])

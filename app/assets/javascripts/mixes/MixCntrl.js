@@ -15,7 +15,7 @@
 
                      function setMixes(data) {
                        $scope.mixes = data.data
-                       console.log(data)
+                      //  console.log(data)
                      }
 
                      function replaceSpaces(string) {
@@ -25,6 +25,8 @@
                      $scope.plusOne = function(index) {
                        $scope.mixes[index].liked_mixes += 1;
                      };
+
+
 
 
                      }])
