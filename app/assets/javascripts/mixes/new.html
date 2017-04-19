@@ -1,0 +1,17 @@
+<h4>New Track</h4>
+<div ng-controller="NewMixController">
+
+
+    <form name="nmForm" ng-submit="submitForm()">
+        <div class="form-group2"><br>
+          <p>title:<input type="text" name="input" ng-model="mix.mix_title" required></p>
+             <select ng-model="mix.dj_name">
+             <option disabled selected value="" required>Artist:</option></select>
+             <option ng-repeat="dj in djs" ng-value="{{ dj.dj_name }}" required>{{mix.dj_name }}</option><br />
+             <select ng-model="mix.genre_name">
+             <option disabled selected value="" required>Genre:</option>
+             <option ng-repeat="genre in genres" ng-value="{{ genre.genre_name }}" required>{{mix.genre_name }}</option></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>

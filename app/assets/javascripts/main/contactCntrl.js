@@ -9,7 +9,7 @@ var app = angular.module("myApp", []);
                     '<div>Date: ' + (new Date()).toString() + '</div>';
 
       $http({
-          url: 'https://api.postmarkapp.com/email',
+          url: '',
           method: 'POST',
           data: {
               'From': 'foo@foo.com',

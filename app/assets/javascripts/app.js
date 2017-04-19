@@ -19,10 +19,11 @@ app
           templateUrl: 'artists/artist.html',
           controller: 'ArtistCntrl as ctrl'
         })
-        .state('home.track', {
-          url:'/tracks/:id',
-          templateUrl: 'mixes/show.html',
-          controller: 'MixDetailCntrl as ctrl'
+
+        .state('home.new', {
+          url: '/new',
+          templateUrl: 'mixes/new.html',
+
         })
         .state('home.about', {
           url:'/about',
@@ -34,11 +35,11 @@ app
           templateUrl: 'main/contact.html',
           controller: 'contactCtrl as ctrl'
         });
-        .state('home.jplayer', {
-          url:'/jplayer',
-          templateUrl: 'mixes/jplayer.html',
-          controller: 'jPlayerCtrl as ctrl'
-        });
+        // .state('home.jplayer', {
+        //   url:'/jplayer',
+        //   templateUrl: 'mixes/jplayer.html',
+        //   controller: 'jPlayerCtrl as ctrl'
+        // });
 
 
     $urlRouterProvider.otherwise('/home');

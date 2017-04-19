@@ -20,6 +20,11 @@ class MixesController < ApplicationController
     @mix = Mix.new
   end
 
+  def liked_mix
+      @mix = Mix.find(params[:id])
+      
+  end
+
   def create
     @mix = Mix.new(mix_params)
     if @mix.save

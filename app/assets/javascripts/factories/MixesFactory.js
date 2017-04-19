@@ -12,12 +12,12 @@
           }
 
         function getMixes() {
-            return $http.get('/api/mixes');
+            return $http.get('api/mixes');
         }
 
         function getMix(id) {
-          return $http.get('/api/mixes/' + id)
-                      .then(handleResponse)
+          return $http.get('api/mixes/' + id)
+                      .then(handleResponse);
         }
         function handleResponse(response) {
            return response.data

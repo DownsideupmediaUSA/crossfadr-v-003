@@ -10,11 +10,11 @@
       templateUrl: 'player.html',
       link: function(scope, element, attrs) {
         var updatePlayer = function(newValue, oldValue, scope) {
-          scope.episode = newValue;
+          scope.mix = newValue;
           console.log("Watch triggered (old = " + oldValue
             + "), new = (" + newValue + ")");
         }
-        scope.$watch(attrs.episode, updatePlayer);
+        scope.$watch(attrs.mix, updatePlayer);
         }
       };
    });
