@@ -1,27 +1,43 @@
-app.controller('NewMixController', ['MixesFactory', '$location', '$scope', function(MixesFactory, $location, $scope){
-  $scope.mix = {mix_title : '', dj_name : '', genre_name : ''};
-  var ctrl = this;
+(function() {
 
-  ctrl.addMix = function(){
-    var newMix = {
-      mix_title: ctrl.mix.mix_title,
-      artist_name: ctrl.mix.dj.dj_name,
-      genre_name: ctrl.mix.genre_name
-    }
+  'use strict';
 
-    $scope.submitForm = function() {
-      MixesFactory.addMix($scope.mix)
-      .then(function(resp){
-        $location.path('mix/' + resp.data.mix.id);
-        alert('New Mix Added!')
-      },
-        function(error){
-          alert('Cannot create mix: ' + error.statusText);
-        }
-      );
-    }
+  angular
+     .module('crossfadr')
+     .controller('NewMixController', ['MixesFactory', 'DjsFactory', '$location', '$scope', function(MixesFactory, DjsFactory, $location, $scope){
+      $scope.mix = {mix_title : '', dj_id : '', genre_id : ''};
+      var ctrl = this;
+
+      ctrl.addMix = addMix;
+
+
+      $scope.djs = [];
+      DjsFactory.getDjs().then(function(data){
+              $scope.djs = data.data;
+      });
+
+
+      $scope.addMix = function(){
+        var newMix = {
+          mix_title: ctrl.mix.mix_id,
+          artist_name: ctrl.mix.dj.dj_id,
+          genre_name: ctrl.mix.genre_id
+        };
+
+       $scope.submitForm = function() {
+          return MixesFactory.addMix(newMix)
+          .then(function(resp){
+            $location.path('/mix/' + resp.mix.id);
+            alert('New Mix Added!')
+          },
+            function(error){
+              alert('Cannot create mix: ' + error.statusText);
+            }
+          );
+        };
 
 
 
   }
 }])
+}())

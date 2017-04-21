@@ -1,15 +1,15 @@
 var app = angular.module("myApp", []);
-  app.controller("contactCtrl", ['$scope','$http',function ($scope,$http){
+  app.controller("contactCtrl", ['$http',function ($scope, $http){
     $scope.success = false;
-    $scope.error = false;
+    $scope.contact = [];
     $scope.send = function () {
-      var htmlBody ='<div>Name: ' + $scope.user.name + '</div>' +
-                    '<div>Email: ' + $scope.user.email + '</div>' +
-                    '<div>Message: ' + $scope.user.body + '</div>' +
+      var htmlBody ='<div>Name: ' + $scope.name + '</div>' +
+                    '<div>Email: ' + $scope.email + '</div>' +
+                    '<div>Message: ' + $scope.content + '</div>' +
                     '<div>Date: ' + (new Date()).toString() + '</div>';
 
       $http({
-          url: '',
+          url: svc,
           method: 'POST',
           data: {
               'From': 'foo@foo.com',
@@ -22,11 +22,11 @@ var app = angular.module("myApp", []);
               'Content-Type': 'application/json',
               'X-Postmark-Server-Token': '8569dcd45-6a1a-4e7b-ae75-ea37629de4'
           }
-      }).
+      })
       success(function (data) {
           $scope.success = true;
-          $scope.user = {};
-      }).
+
+      })
       error(function (data) {
           $scope.error = true;
       });

@@ -16,11 +16,15 @@
         }
 
         function getMix(id) {
-          return $http.get('api/mixes/' + id)
+          return $http.get('api/mixes' + id)
                       .then(handleResponse);
         }
         function handleResponse(response) {
            return response.data
+        }
+
+        function addMix(newMix) {
+          return $http.post('api/mixes', addMix)
         }
 
 
