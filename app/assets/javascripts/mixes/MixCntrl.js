@@ -26,6 +26,8 @@
                        $scope.mixes[index].liked_mixes += 1;
                      };
 
+                     
+
 
 
 

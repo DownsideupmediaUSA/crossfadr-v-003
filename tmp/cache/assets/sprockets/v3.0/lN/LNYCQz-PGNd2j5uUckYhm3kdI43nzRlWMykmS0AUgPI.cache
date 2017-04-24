@@ -1,0 +1,17 @@
+{:uriI"‚file://app/assets/javascripts/mixes/new.html?type=text/ng-html&id=73b9a7cea79f7a13b9c7bea31bbfdc46f734b8479d40d987d3a6d2bb633c6bcc:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/mixes/new.html;T:	nameI"mixes/new;T:logical_pathI"mixes/new.html;T:content_typeI"text/ng-html;T:sourceI"3<h4>New Track</h4>
+<div ng-controller="NewMixController as NewMixController">
+    <form name="addMix" ng-submit="submitForm()" >
+        <div class="form-group2"><br>
+          <p>title:<input type="text" name="input" ng-model="mix.mix_title"  required="true"></p>
+             <select ng-model="dj.dj_name"><option ng-repeat="dj in djs" ng-value="{{ dj.id }}"  required="true">{{dj.dj_name }}</option>
+             </select>
+        </div>
+         <button type="submit" value="submit" class="ui mini secondary basic button">Submit</button>
+    </form>
+  </div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/mixes/new.html;TT:charsetI"
+utf-8;F:digest"%«bUÑµ´Ô²YyP
+Œ˜Öµs"QA¨Kª*IhNH:lengthi3:dependencies_digest"%Ö%³F0g¾SL]Ê@ì J6þýú¶vZdy´F:idI"E73b9a7cea79f7a13b9c7bea31bbfdc46f734b8479d40d987d3a6d2bb633c6bcc;F:
+mtimel+ñyûX

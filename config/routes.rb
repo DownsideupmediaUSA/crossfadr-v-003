@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get 'api/mixes', to: 'mixes#api_index'
     get 'api/mixes/:id', to: 'mixes#api_show'
     # get '/assets/js/underscore.js'
+    post 'api/mixes', to: 'mixes#api_index'
 
 
     get 'api/djs', to: 'djs#api_index'

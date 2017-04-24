@@ -9,6 +9,7 @@
           return {
             getMixes: getMixes,
             getMix: getMix,
+            addMix: addMix
           }
 
         function getMixes() {
@@ -24,8 +25,9 @@
         }
 
         function addMix(newMix) {
-          return $http.post('api/mixes', addMix)
-        }
+          return $http.post('api/mixes',{mix: newMix});
+        };
+
 
 
       }])
