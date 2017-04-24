@@ -15,17 +15,17 @@
       $scope.djs = data.data;
       });
 
-      $scope.addMix = function(){
+      $scope.addMix = function(newMix){
         var newMix = {
-          mix_title: ctrl.mix.mix_id,
-          artist_name: ctrl.mix.dj.dj_id,
-          genre_name: ctrl.mix.genre_id
+          mix_title: ctrl.mix.mix_name,
+          artist_name: ctrl.mix.dj.dj_name,
+          genre_name: ctrl.mix.genre_name
         };
 
-       ctrl.submitForm() = function() {
-         alert("did this shit work?")
+       $scope.submitForm() = function() {
+         alert("did this work?")
          MixesFactory
-                     .addMix(ctrl.newMix)
+                     .addMix(newMix)
                      .then(function(resp){
                          $location.path('/mixes' + resp.mix.id);
                          alert('New Mix Added!');

@@ -25,8 +25,9 @@
         }
 
         function addMix(newMix) {
-          return $http.post('api/mixes',{mix: newMix});
-        };
+          return $http.post('api/mixes', {mix: newMix})
+                      .then(handleResponse);
+        }
 
 
 
