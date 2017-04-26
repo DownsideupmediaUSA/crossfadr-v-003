@@ -1,8 +1,10 @@
-app.controller("MainCtrl", MainCtrl)
+
+angular
+       .module('crossfadr')
+       .controller("MainCtrl", MainCtrl)
 
 
 
-function MainCtrl( ) {
-
+function MainCtrl() {
 
 }

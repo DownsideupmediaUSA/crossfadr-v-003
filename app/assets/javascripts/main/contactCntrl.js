@@ -1,12 +1,16 @@
-var app = angular.module("myApp", []);
-  app.controller("contactCtrl", ['$http',function ($scope, $http){
-    $scope.success = false;
-    $scope.contact = [];
-    $scope.send = function () {
-      var htmlBody ='<div>Name: ' + $scope.name + '</div>' +
-                    '<div>Email: ' + $scope.email + '</div>' +
-                    '<div>Message: ' + $scope.content + '</div>' +
-                    '<div>Date: ' + (new Date()).toString() + '</div>';
+(function() {
+  'use strict';
+
+  angular
+         .module('crossfadr')
+         .controller("contactCtrl", ['$http',function ($scope, $http){
+           $scope.success = false;
+           $scope.contact = [];
+           $scope.send = function () {
+             var htmlBody ='<div>Name: ' + $scope.name + '</div>' +
+                           '<div>Email: ' + $scope.email + '</div>' +
+                           '<div>Message: ' + $scope.content + '</div>' +
+                           '<div>Date: ' + (new Date()).toString() + '</div>';
 
       $http({
           url: svc,
@@ -32,3 +36,5 @@ var app = angular.module("myApp", []);
       });
   }
 }]);
+
+}())
