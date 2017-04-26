@@ -19,17 +19,27 @@
         function getMix(id) {
           return $http.get('api/mixes' + id)
                       .then(handleResponse);
-        }
-        function handleResponse(response) {
-           return response.data
-        }
+        };
 
         function addMix(newMix) {
-          return $http.post('api/mixes', {mix: newMix})
-                      .then(handleResponse);
-        }
+          var req = {
+              method: 'POST',
+              url: '/api/mixes/' + id,
+              headers: {
+                'Content-Type': 'json'
+              }
+          }
+          return $http(req)
+                      .then(handleCreate)
+          }
 
+          function handleCreate(response) {
+            return response.data
+          }
 
+         function handleResponse(response) {
+            return response.data
+         }
 
-      }])
+  }])
 }())
