@@ -7,9 +7,18 @@
          <select ng-model="dj.dj_name"><option ng-repeat="dj in ctrl.djs" ng-value="{{ dj.id }}" required >{{dj.dj_name }}</option>
          </select>
     </div>
-    <br>Drag and drop a mix file:
-    <div class="dragndrop" dragNDrop filesToUpload="files">
-
+<br>
+    <div class="file-dragndrop-over" dragNDdrop files-to-upload="files">
+      <span>drop mp3 file here</span>
     </div>
-     <input id="submit" type="submit"  class="ui mini secondary basic button">Submit</button>
+    <div >
+      <div ng-repeat="file in files">
+        <div class="mp3-preview-container"><span class="remove" ng-click="remove($index)">X</span>
+          <img ng-src={{file.preview}} class="img-thumbnail">
+        </div>
+        <div>Name: {{file.name}}</div>
+        <div>Size {{file.size / 1024 | number:2}} KB</div>
+      </div>
+    </div>
+     <input id="save" type="submit"  class="ui mini secondary basic button"></button>
 </form>

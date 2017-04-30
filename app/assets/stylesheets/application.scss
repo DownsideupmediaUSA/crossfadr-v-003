@@ -34,18 +34,44 @@ float: right;
 
  }
 
- .dragndrop {
+ .image-container {
+   width: 250px;
+   margin-top: 30px;
+ }
+
+ .image {
+   border: 2px;
+   text-align: center;
+   width: 250px;
+ }
+
+ .mp3-preview-container {
+   width: 250px;
+   margin-top: 30px;
+ }
+
+ .file-name {
+   font-family: Arial;
+ }
+ .textarea {
+   border: 2px dashed #ddd;
+   width: 250px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+ }
+
+ .file-dragndrop {
    border: 2px dashed #ddd;
    padding: 30px;
    text-align: center;
-   width: 250px
+   width: 250px;
  }
 
- .dragndrop-over {
+ .file-dragndrop-over {
    border: 2px dashed #aaa;
    padding: 30px;
    text-align: center;
-   width: 250px
+   width: 250px;
  }
 
  .remove {

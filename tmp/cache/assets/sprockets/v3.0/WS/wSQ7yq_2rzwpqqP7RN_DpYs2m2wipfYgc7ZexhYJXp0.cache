@@ -1,69 +1,0 @@
-{:uriI"Ñfile://app/assets/javascripts/mixes/mixes.html?type=text/ng-html&id=f6e08cafa49738a2ffa65ca7d8d87950717cd0301eb348c224f4e036cd32efa3:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/mixes/mixes.html;T:	nameI"mixes/mixes;T:logical_pathI"mixes/mixes.html;T:content_typeI"text/ng-html;T:sourceI"í
-<h4>Mixes</h4>
-
-<section class="mix-card">
-    <div class="ui card" >
-      <div ng-repeat="mix in mixes | filter:searchBox" class="content">
-        <a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
-         <div ng-view="mix" class="meta">
-           <div class="dj-card">
-             <div class="image">
-               <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
-             </div><!--image-->
-             <div class="mix-info">
-               <h3>{{mix.mix_title}}</h3></a>
-             </div><!--mix-info-->
-             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-             	<div class="jp-type-single">
-             		<div class="jp-gui jp-interface">
-             			<div class="jp-volume-controls">
-
-
-             				<div class="jp-volume-bar">
-             					<div class="jp-volume-bar-value"></div>
-             				</div>
-             			</div>
-             			<div class="jp-controls-holder">
-             				<div class="jp-controls">
-             					<button class="ui compact icon button" role="button" tabindex="0"><i class="play icon"></i></button>
-                       <button class="ui compact button" role="button" tabindex="1"><i class="pause icon"></i></button>
-
-             				</div>
-             				<div class="jp-progress">
-             					<div class="jp-seek-bar">
-             						<div class="jp-play-bar"></div>
-             					</div>
-             				</div>
-             				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-             				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-             				<div class="jp-toggles">
-                   </div>
-             			</div>
-             		</div>
-             		<div class="jp-details">
-             			<div class="jp-title" aria-label="title">&nbsp;</div>
-             		</div>
-             		<!-- <div class="jp-no-solution">
-             			<span>Update Required</span>
-             			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-             		</div> -->
-             	</div>
-             </div>
-
-              <div class="likes">
-                <a><i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}</a>
-              </div><!--likes-->
-                  <h5>{{mix.dj.dj_name}}</h5>
-      </div><!--Card-->
-  </section>
-
-
-<!-- block -->
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/mixes/mixes.html;TT:charsetI"
-utf-8;F:digest"%*_ÂVy>S£è&Y£ë¥nØ4µÅ{Àƒ’˘≤†:lengthií
-:dependencies_digest"%Œ
-ë‹N¬M±¡÷x§`~¿c“(n+W†ñ]ß£:idI"Ef6e08cafa49738a2ffa65ca7d8d87950717cd0301eb348c224f4e036cd32efa3;F:
-mtimel+˘D˘X

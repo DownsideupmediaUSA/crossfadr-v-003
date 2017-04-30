@@ -11,8 +11,9 @@
 
     // Outlets
     ctrl.djs = [];
-    ctrl.mix = {};
-
+    ctrl.mix = [];
+    $scope.files = [];
+    $scope.description = '';
 
     // Action Outlets
     ctrl.submit = submit
@@ -27,7 +28,7 @@
         return MixesFactory
         .addMix(ctrl.mix)
         .then(function(response) {
-          
+
 debugger
         })
 
@@ -40,19 +41,47 @@ debugger
         artist_name: ctrl.dj.dj_name,
         genre_name: ctrl.genre_name
       }
+      $scope.addMix = function(newMix) {
+      var ctrl = new Mix();
+      ctrl.name = title;
+      ctrl.$save(function(){
+        $scope.mixes = Mix.query();
+      });
 
-      ctrl.saveMix = function(addMix) {
 
-        ctrl.mix.$save(function() {
-          $location.path('mixes');
-        })
       }
+
+      // ctrl.saveMix = function(addMix) {
+      //   $location.path('mixes');
+      //   // ctrl.mix.$save(function() {
+      //   //   $location.path('mixes');
+      //   // })
+      // }
 
     };
 
 
+    $scope.save = function(){
+      var fd = new FormData();
+      angular.forEach($scope.files, function(file,key){
+        var fileObject =  'file' + key;
+        fd.append(fileObject, file.file);
+      })
+
+    }
+     $scope.remove = function(index){
+          var files = [];
+          angular.forEach($scope.files, function(file, key) {
+            if(index != key) {
+              files.push(file);
+          }
+
+        });
+        $scope.files = files;
+     }
 
 
 
-  }])
+
+  }]);
 }())
