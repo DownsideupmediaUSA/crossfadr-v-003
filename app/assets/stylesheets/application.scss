@@ -33,3 +33,28 @@ float: right;
  .form-group p {
 
  }
+
+ .dragndrop {
+   border: 2px dashed #ddd;
+   padding: 30px;
+   text-align: center;
+   width: 250px
+ }
+
+ .dragndrop-over {
+   border: 2px dashed #aaa;
+   padding: 30px;
+   text-align: center;
+   width: 250px
+ }
+
+ .remove {
+   float: right;
+   color: green;
+ }
+
+ .remove:hover {
+   color: red;
+   cursor: pointer;
+   font-size: 25px;
+ }

@@ -24,7 +24,7 @@
         function addMix(newMix) {
           var req = {
               method: 'POST',
-              url: '/api/mixes/' + id,
+              url: 'api/mixes' ,
               headers: {
                 'Content-Type': 'json'
               }

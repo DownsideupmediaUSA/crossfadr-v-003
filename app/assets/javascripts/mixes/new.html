@@ -1,11 +1,15 @@
 <h4>New Track</h4>
-<div ng-controller="NewMixController as NewMixController">
-    <form name="addMix" >
-        <div class="form-group2"><br>
-          <p>title:<input type="text" name="input" ng-model="mix.mix_title"  required="true"></p>
-             <select ng-model="dj.dj_name"><option ng-repeat="dj in djs" ng-value="{{ dj.id }}"  required="true">{{dj.dj_name }}</option>
-             </select>
-        </div>
-         <button input type="submit" ng-click="submitForm()" class="ui mini secondary basic button">Submit</button>
-    </form>
-  </div>
+
+<form name="addMix" ng-submit="ctrl.submit()" >
+    <div class="form-group2"><br>
+      <p>Title:<input type="text" name="input" ng-model="ctrl.mix.mix_title"  required></p>
+         Artist:
+         <select ng-model="dj.dj_name"><option ng-repeat="dj in ctrl.djs" ng-value="{{ dj.id }}" required >{{dj.dj_name }}</option>
+         </select>
+    </div>
+    <br>Drag and drop a mix file:
+    <div class="dragndrop" dragNDrop filesToUpload="files">
+
+    </div>
+     <input id="submit" type="submit"  class="ui mini secondary basic button">Submit</button>
+</form>
