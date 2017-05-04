@@ -1,7 +1,5 @@
 class MixesController < ApplicationController
 
-
-
   def index
     @mixes = Mix.all
   end
@@ -22,31 +20,30 @@ class MixesController < ApplicationController
 
   def liked_mix
       @mix = Mix.find(params[:id])
-      
+
   end
 
   def create
+
     @mix = Mix.new(mix_params)
-    if @mix.save
-      flash[:success] = "You have successfully created an mix!"
-      redirect_to @mix
+     #binding.pry 
+    respond_to do |format|
+      if @mix.save
+        format.json { render json: @mix, status: :created }
       else
-        flash[:alert] = "Oops...your mix was not saved."
+        format.json { render json: { errors: @mix.errors }, status: :bad_request }
       end
+    end
   end
 
   def show
     @mix = Mix.find(params[:id])
   end
 
-
-
-
-
   private
 
   def mix_params
-  params.require(:mix).permit(:mix_title, :dj_id ,:genre_id, :mix_mp3, :mp3_url_file_name, :mix_image)
+    params.require(:mix).permit(:mix_title, :dj_id, :genre_id, :mix_mp3, :mix_image, :mix_image_file_name)
   end
 
 end

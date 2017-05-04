@@ -4,14 +4,17 @@
 
   angular
    .module('crossfadr')
-   .controller('NewMixController', ['MixesFactory', 'DjsFactory', '$location', '$scope',
-   function(MixesFactory, DjsFactory, $location, $scope) {
+   .controller('NewMixController', ['MixesFactory', 'DjsFactory', '$location', '$scope', '$state',
+   function(MixesFactory, DjsFactory, $location, $scope, $state) {
 
-    var ctrl = this
+    var ctrl = this;
+    $scope.mix_title = '';
+    $scope.dj_name = '';
+    $scope.mix_image = [];
+
 
     // Outlets
-    ctrl.djs = [];
-    ctrl.mix = [];
+
     $scope.files = [];
     $scope.description = '';
 
@@ -23,65 +26,29 @@
       ctrl.djs = data.data;
     });
 
-    function submit() {
-      alert("did this work")
+    function submit(addMix) {
+      var f = document.getElementById('mix-image-file').files[0],
+      r = new FileReader();
+      r.onload = function(e){
+        $scope.mix_image = r.result;
+        $scope.mix_image_file_name = f.name;
+
+        var newMix = {
+          mix_title: $scope.mix_title,
+          artist_name: $scope.dj_name,
+          mix_image_file_name: $scope.mix_image_file_name,
+          mix_image: $scope.mix_image
+        };
+
         return MixesFactory
-        .addMix(ctrl.mix)
+        .addMix(newMix)
         .then(function(response) {
+          $state.go('home.tracks')
 
-debugger
-        })
+       })
+      }
+      r.readAsDataURL(f);
 
     };
-
-    function addMix(newMix) {
-
-      var newMix = {
-        mix_title: ctrl.mix_title,
-        artist_name: ctrl.dj.dj_name,
-        genre_name: ctrl.genre_name
-      }
-      $scope.addMix = function(newMix) {
-      var ctrl = new Mix();
-      ctrl.name = title;
-      ctrl.$save(function(){
-        $scope.mixes = Mix.query();
-      });
-
-
-      }
-
-      // ctrl.saveMix = function(addMix) {
-      //   $location.path('mixes');
-      //   // ctrl.mix.$save(function() {
-      //   //   $location.path('mixes');
-      //   // })
-      // }
-
-    };
-
-
-    $scope.save = function(){
-      var fd = new FormData();
-      angular.forEach($scope.files, function(file,key){
-        var fileObject =  'file' + key;
-        fd.append(fileObject, file.file);
-      })
-
-    }
-     $scope.remove = function(index){
-          var files = [];
-          angular.forEach($scope.files, function(file, key) {
-            if(index != key) {
-              files.push(file);
-          }
-
-        });
-        $scope.files = files;
-     }
-
-
-
-
   }]);
 }())

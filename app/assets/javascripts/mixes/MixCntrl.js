@@ -24,9 +24,10 @@
 
                      $scope.plusOne = function(index) {
                        $scope.mixes[index].liked_mixes += 1;
+                       
                      };
 
-                     
+
 
 
 

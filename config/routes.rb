@@ -1,3 +1,4 @@
+require 'api_constraints'
 Rails.application.routes.draw do
   root "application#index"
   devise_for :users
@@ -13,12 +14,18 @@ Rails.application.routes.draw do
     get 'api/mixes', to: 'mixes#api_index'
     get 'api/mixes/:id', to: 'mixes#api_show'
     # get '/assets/js/underscore.js'
-    post 'api/mixes', to: 'mixes#api_index'
+    post 'api/mixes', to: 'mixes#create', defaults: {format: :json}
 
 
     get 'api/djs', to: 'djs#api_index'
     get 'api/djs/:id', to: 'djs#api_show'
 
+    # namespace :api, defaults: {format: 'json'} do
+    #   scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+    #     resources :mixes
+    #     resources :djs
+    #   end
+    # end
 
 
  #  namespace :api, defaults: {format: :json} do

@@ -1,11 +1,12 @@
 {
-    "name": "bower-rails generated vendor assets",
-    "dependencies": {
-      "angular": "v1.5.8",
-      "angular-ui-router": "latest",
-      "angular-resource": "v1.5.3",
-      "moment": "latest",
-      "semantic": "latest",
-      "jplayer": "latest"
-    }
+  "name": "bower-rails generated vendor assets",
+  "dependencies": {
+    "angular": "v1.5.8",
+    "angular-ui-router": "latest",
+    "angular-resource": "v1.5.3",
+    "moment": "latest",
+    "semantic": "latest",
+    "jplayer": "latest",
+    "angular-upload": "^1.0.12"
+  }
 }

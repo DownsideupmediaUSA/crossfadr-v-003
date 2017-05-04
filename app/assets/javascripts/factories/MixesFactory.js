@@ -28,18 +28,30 @@
               headers: {
                 'Content-Type': 'json'
               }
+              , data: {mix: newMix }
           }
-          return $http(req)
-                      .then(handleCreate)
-          }
+          
 
-          function handleCreate(response) {
-            return response.data
-          }
+          return $http.post('api/mixes', {mix: newMix});
+        }
+
+
+        function handleCreate(response) {
+          return response.data
+        }
 
          function handleResponse(response) {
             return response.data
          }
 
-  }])
+        //  function uplike(id) {
+        //    var req = {
+        //        method: 'POST',
+        //        url: 'api/uplike' ,
+        //        headers: {
+        //          'Content-Type': 'json'
+        //        }
+        //        , data: id
+        //    }
+     }])
 }())

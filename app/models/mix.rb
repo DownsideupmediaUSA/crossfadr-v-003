@@ -10,3 +10,8 @@ class Mix < ApplicationRecord
                                  :file_name => { :matches => [/mp3\Z/] }
 
 end
+
+
+# method to return the count of the likes for a mix
+# set up likes controller and route for it
+# for each post request you need to get user id and mix id
