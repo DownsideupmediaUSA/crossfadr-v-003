@@ -1,35 +1,0 @@
-{:uriI"‚file://app/assets/javascripts/mixes/new.html?type=text/ng-html&id=61ab326b1c31a7e2749009d216d9faccb40a880966ddeba6e93aa2dd845f42db:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/mixes/new.html;T:	nameI"mixes/new;T:logical_pathI"mixes/new.html;T:content_typeI"text/ng-html;T:sourceI"©<h4>New Track</h4>
-
-<form name="addMix" ng-submit="ctrl.submit()" >
-  <input type = "file" file-model="mix_image" id="mix-image-file"/>
-  <div><button class="ui button-upload"><i class="upload icon"></i>Cover Art Upload</button></div>
-   <div class="form-group2"><br>
-      <p>Title:<input type="text" name="input" ng-model="mix_title"  required></p>
-         Artist:
-         <select ng-model="dj_name"><option ng-repeat="dj in ctrl.djs" ng-value="dj.dj_name" required >{{dj.dj_name }}</option>
-         </select>
-    </div>
-<br>
-   <div ng-app="module" ng-controller="NewMixController"></div>
-
-    <!-- <div class="file-drop-zone" ng-mouseenter="fileDropzone()" files-to-upload="files">
-      <span>drop mp3 file here</span>
-    </div>
-    <div >
-      <div ng-repeat="file in files">
-        <div class="image-container"><span class="remove" ng-click="remove($index)">X</span>
-          <img ng-src={{file.preview}} class="img-thumbnail">
-        </div>
-        <div>Name: {{file.name}}</div>
-        <div>Size {{file.size / 1024 | number:2}} KB</div>
-      </div> -->
-      <br>
-    </div>
-     <input id="save" type="submit"  class="ui mini secondary basic button grey "></input>
-</form>
-;T:metadata{	:dependencieso:Set:
-@hash{
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/mixes/new.html;TT:charsetI"
-utf-8;F:digest"%233÷ÛKÉr*:–“Ù†ØòƒÁ
-[sà"¤²6:lengthi©:dependencies_digest"%GD6mPªµ‡óKº?›95ºÇú‡Î¹¿à:idI"E61ab326b1c31a7e2749009d216d9faccb40a880966ddeba6e93aa2dd845f42db;F:
-mtimel+úY

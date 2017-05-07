@@ -3,9 +3,10 @@
     <a class="item" href="#" ui-sref="home.about"  ui-sref-active="active">About <span class="sr-only"></span></a>
     <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
     <a class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
-    <a class="item" href="#" ui-sref="home.new"  ui-sref-active="active">logout <span class="sr-only"></span></a>
-    <div class="ui secondary basic button" ng-click="vm.logout()">Logout</div>
+
   <div class="right menu" id="abId0.43591901674613154">
+    <div class="greeting"> Hi, {{ vm.user.username}} </div>
+    <button ng-click="vm.logout()" name="logout">logout</button>
     <div class="item" id="abId0.5321512046600605">
       <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
         <input type="text" ng-model="searchBox" placeholder="Search Me...">
