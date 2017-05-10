@@ -22,7 +22,7 @@
              controller: 'ArtistCntrl as ctrl'
            })
            .state('home.track', {
-             url:'mixes/:mixId',
+             url:'mixes/:id',
              templateUrl: 'mixes/show.html',
              controller: 'mixDetailCntrl as ctrl'
            })
@@ -37,11 +37,11 @@
              templateUrl: 'static/about.html',
              controller: 'AboutCntrl as ctrl'
            })
-           .state('home.register', {
-             url:'/register',
-             templateUrl: 'main/register.html',
-             controller: 'MainCtrl as ctrl'
-           });
+          //  .state('home.register', {
+          //    url:'/register',
+          //    templateUrl: 'main/register.html',
+          //    controller: 'MainCtrl as ctrl'
+          //  });
            // .state('home.jplayer', {
            //   url:'/jplayer',
            //   templateUrl: 'mixes/jplayer.html',

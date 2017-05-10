@@ -1,65 +1,36 @@
 (function() {
-
   'use strict'
-
   angular
-         .module('crossfadr')
-         .controller('MainCtrl', MainCtrl)
-
-          function MainCtrl(Auth, $rootScope) {
-              // var vm = this
-              // vm.logout = Auth.logout
-              // vm.login = login
-              // vm.register = register
-              //
-              // Auth.currentUser()
-              //     .then(function(user) {
-              //
-              //       $rootScope.currentUser = user
-              //     }, function(error) {
-              //       console.log(error)
-              //     })
-              //
-              // function login() {
-              //   var config = {
-              //       headers: {
-              //         'X-HTTP-Method-Override': 'POST'
-              //       }
-              //   };
-              //
-              //     Auth.login(vm.userForm, config)
-              //         .then(function(user) {
-              //              $rootScope.currentUser = user
-              //           }, function(error) {
-              //             console.log(error)
-              //         })
-              //   }
-              //
-              //      function register() {
-              //           var config = {
-              //             headers: {
-              //               'X-HTTP-Method-Override': 'POST'
-              //             }
-              //       };
-              //
-              //        Auth.register(vm.newUser, config)
-              //            .then(function(registeredUser) {
-              //              $rootScope.currentUser = registeredUser
-              //            }, function(error) {
-              //              console.log(error)
-              //            });
-              //
-              //        }
-              //
-              //       $rootScope.$on('devise:logout', function(event, user) {
-              //         $rootScope.user = {}
-              //       })
-
-                }
+    .module('crossfadr')
+    .controller('MainCtrl', ['$scope', '$localStorage', '$http',
+    function MainCtrl($scope, $localStorage, $http) {
+      var vm = $scope;
+      vm.$storage = $localStorage;
+      //vm.logout = logout;
+      $scope.userForm = {email: 'dummyemail'};
 
 
 
-
-
-
+      vm.login = function() {
+        console.log('login called');
+        var loginData = {user: {
+          email: vm.userForm.email,
+          password: vm.userForm.password
+        }};
+        // var config = {
+        //   headers: {
+        //     'Authorization': 'Token token=' + token + ', email=' + email
+        //   }
+        // };
+        $http.post('/session/new', loginData)
+          .success(function(resp) {
+            console.log(resp);
+            vm.$storage.email = resp.user.email;
+            vm.$storage.token = resp.token;
+          })
+          .error(function(err) {
+            console.log(err);
+          })
+      }
+    }])
 }());

@@ -21,10 +21,17 @@
                            return string.replace(/\s/g, '-')
                          };
 
-                        //  $scope.plusOne = function(index) {
-                        //    $scope.mixes[index].liked_mixes += 1;
-                         //
-                        //  };
+                         $scope.plusOne = function(index) {
+                           const id = $scope.mixes[index].id
+                           $http.post('/liked_mixes', {mix_id: id})
+                              .success(function(response) {
+                                console.log(response);
+                                $scope.mixes[index].liked_mixes = response.mix_likes;
+                              })
+                              .error(function(resp) {
+                                console.log('error', resp);
+                              });
+                         };
          }])
 
 
