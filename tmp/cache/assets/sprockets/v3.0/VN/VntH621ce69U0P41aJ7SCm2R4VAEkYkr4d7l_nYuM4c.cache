@@ -1,0 +1,15 @@
+{:uriI"…file://app/assets/javascripts/main/contact.html?type=text/ng-html&id=33b00d6733692fa38d4c265c77294e0917611c24f40104a8b3b67e82ef83937f:ET:load_pathI"app/assets/javascripts;T:filenameI"-app/assets/javascripts/main/contact.html;T:	nameI"main/contact;T:logical_pathI"main/contact.html;T:content_typeI"text/ng-html;T:sourceI"¹For demo submission inquiries:
+
+    <form name="messageForm" ng-submit="submitForm()">
+        <div class="form-group"><br>
+          <p>email:<input type="email" name="input" ng-model="text" ng-pattern="emailFormat" required></p>
+             message:<textarea name="content" class="form-control" ng-model="message.content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI";file-digest://app/assets/javascripts/main/contact.html;TT:charsetI"
+utf-8;F:digest"%Oß§råóÃ“»®Üœÿ‰ŸÄ$•Çµ¡v]’‚¸åÛ.:lengthi¹:dependencies_digest"%M´ÿ¹Ü7íÙ»£;IâÐµç¾€ÓØ²÷…†)3:idI"E33b00d6733692fa38d4c265c77294e0917611c24f40104a8b3b67e82ef83937f;F:
+mtimel+­>úX

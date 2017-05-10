@@ -4,8 +4,8 @@
 
   angular
      .module('crossfadr')
-     .controller('MixCntrl', ['$stateParams', 'MixesFactory', '$scope',
-     function($stateParams, MixesFactory, $scope ) {
+     .controller('MixCntrl', ['$http', '$stateParams', 'MixesFactory', '$scope',
+     function($http, $stateParams, MixesFactory, $scope ) {
 
          var vm = this
          $scope.mixes = []
@@ -23,8 +23,15 @@
                      }
 
                      $scope.plusOne = function(index) {
-                       $scope.mixes[index].liked_mixes += 1;
-                       
+                       const id = $scope.mixes[index].id
+                       $http.post('/liked_mixes', {mix_id: id})
+                          .success(function(response) {
+                            console.log(response);
+                            $scope.mixes[index].liked_mixes = response.mix_likes;
+                          })
+                          .error(function(resp) {
+                            console.log('error', resp);
+                          });
                      };
 
 

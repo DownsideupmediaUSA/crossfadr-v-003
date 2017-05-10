@@ -1,0 +1,68 @@
+{:uriI"Çfile://app/assets/javascripts/main/home.html?type=text/ng-html&id=effe811980ef3681e23e217be59a731f0ba983fe84ee2168ddd45e7572d192d5:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/main/home.html;T:	nameI"main/home;T:logical_pathI"main/home.html;T:content_typeI"text/ng-html;T:sourceI"C
+<div class="ui secondary menu">
+  <a href="/" class="item" ui-sref-active="active">Home<span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.about"  ui-sref-active="active">About <span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
+
+
+  <div class="right menu" id="abId0.43591901674613154">
+
+
+    <div class="item" id="abId0.5321512046600605">
+      <div class="ui transparent icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+        <input type="text" ng-model="searchBox" placeholder="Search Me...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui raised very padded text container segment1">
+  <div class="ui message">
+    <div class="header">
+      <h6>Welcome to...</h6>
+       CROSSFADR
+      <h6>Your source for the hottest dance music!</h6>
+    </div><!--header-->
+
+    <div class="login">
+      <h4 ng-if="!vm.currentUser.username"> Hi, {{ vm.user.username}} </h4>
+      <button ng-if="!!vm.currentUser.username" ng-click="vm.logout()" >logout</button>
+      <form ng-if="!vm.currentUser.username" ng-submit="vm.login()">
+        <label for="username">Username:</label>
+        <input type="text" ng-model="vm.userForm.username" required><br>
+        <label for="username">  Email:</label>
+        <input type="email" ng-model="vm.userForm.email" required><br>
+        <label for="username">Password:</label>
+        <input type="text" ng-model="vm.userForm.password" required><br>
+        <input type="submit" value="login">
+      </form>
+
+      <form ng-if="!vm.currentUser.username" ng-submit="vm.register()">
+        <label for="username">Username:</label>
+        <input type="text" ng-model="vm.newUser.username" required><br>
+        <label for="username">  Email:</label>
+        <input type="email" ng-model="vm.newUser.email" required><br>
+        <label for="username">Password:</label>
+        <input type="text" ng-model="vm.newUser.password" required><br>
+        <input type="submit" value="Register">
+      </form>
+
+
+
+
+      <p><a class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Listen<span class="sr-only"></span></a></p></button>
+  </div><!--ui-message-->
+  <div class="ui raised very padded text container segment 2">
+     <div class="ui container">
+       <ui-view></ui-view>
+     </div>
+  </div>
+</div> <!--segment>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/main/home.html;TT:charsetI"
+utf-8;F:digest"%ƒµ'—Gıd“D¥õô–CÕ9Yee”È¡úßë(∂π:lengthiC
+:dependencies_digest"%c?‚êàF÷A&6¶´i£≠Û„ÿì‹X7–2xÜë
+:idI"Eeffe811980ef3681e23e217be59a731f0ba983fe84ee2168ddd45e7572d192d5;F:
+mtimel+”–Y

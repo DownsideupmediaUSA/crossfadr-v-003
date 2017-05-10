@@ -1,11 +1,42 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
   has_many :liked_mixes
   has_many :shared_mixes
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  before_create :generate_authentication_token
+  before_create :encrypt_password
 
-  
+  # API methods
+  def verified_password? pass
+    pass == crypt.decrypt_and_verify(self.password)
+  end
+
+  def generate_authentication_token
+    loop do
+      self.authentication_token = SecureRandom.base64(64)
+      break unless User.find_by(authentication_token: authentication_token)
+    end
+  end
+
+  def encrypt_password
+    self.password = crypt.encrypt_and_sign(password)
+  end
+
+  def generate_new_authentication_token
+    self.generate_authentication_token
+    self.save
+  end
+
+  private
+
+  def crypt
+    @crypt ||= ActiveSupport::MessageEncryptor.new(Rails.configuration.secret_key_base)
+  end
+
+
+
+
+
+
+
 end

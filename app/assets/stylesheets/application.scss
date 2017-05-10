@@ -10,23 +10,21 @@
   column-rule-width: 25px;
   column-rule-style: outset;
     column-span: 209px;
+
 }
 
 .mix-card {
-  -moz-column-count:2;
+  -moz-column-count: 2;
   -moz-column-gap: 2;
   -webkit-column-count: 2;
   -webkit-column-gap: 2;
   column-count: 2;
-  column-gap: 2px;
-
-
+  column-width: 10px;
+  column-break-inside: avoid;
+  float: left;
 
 }
 
-// .meta{
-//   padding: 0px;
-// }
 
 .dj-card {
   border: 200px;
@@ -46,6 +44,7 @@
 
 .mix-info {
   float: left;
+  break-after: always;
 }
 
 .jp-controls{
@@ -61,43 +60,14 @@
 
 .ui.card {
   padding-left: 5px;
-  float: right;
+  float: left;
 }
 
 .ui-raised-very-padded-text-container-segment1 {
-  // padding : 1em;
-  // width: 100%;
-  // height: 200px;
-  // box-sizing: border-box;
-  //
-  // /* At the bottom of our background stack,
-  //    let's have a misty grey solid color */
-  // background-color: #E4E4D9;
-  //
-  // /* We stack linear gradients on top of each
-  //    other to create our color strip effect.
-  //    As you will notice, color gradients are
-  //    considered to be images and can be
-  //    manipulated as such */
-  // background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
-  //                   linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
-  //                   linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
-  //                   linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
-  //                   linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
-  //                   linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
-  //                   linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
-
 }
 
 
  .ui-raised-very-padded-text-container-segment2 {
-
-
  }
 
  .ui.padded.segment {
@@ -105,6 +75,7 @@
  }
 
  .mix-info {
+  display: block;
   padding-left: 10px;
   float: left;
  }
@@ -113,14 +84,21 @@
    float: right;
  }
 
- .ui-card {
-  padding-left: 5px;
+ .uicard {
+  padding-left: 0px;
   float: right;
+  break-after: always;
  }
 
  .form-group p {
    border: 2px;
    width: 250px;
+
+ }
+
+ .content {
+  float: left;
+
 
  }
 

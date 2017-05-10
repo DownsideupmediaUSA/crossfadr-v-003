@@ -54,6 +54,10 @@ gem 'seed_dump'
 
 gem 'pry'
 
+gem 'acts_as_votable'
+
+gem 'devise_token_auth'
+
 
 
   gem 'angular-rails-templates'

@@ -1,22 +1,20 @@
 (function() {
   'use strict';
 
-  // app.directive('plusOne', function() {
-  //      return {
-  //        restrict: 'E',
-  //        scope: {
-  //        },
-  //  //might need to change url//
-  //        templateUrl: 'js/main/mixes.html',
-  //          link: function(liked_mix() {
-  //          function(scope, element, attrs) {
-  //            scope.liked_mix = function() {
-  //              element.toggleClass('thumbs outline up icon');
-  //            }
-  //          }
-  //        })
-  // };
+  angular
+         .module('crossfadr')
+         .directive('plusOne', function() {
+          return { restrict: 'E',
+                      scope: {},
+                      templateUrl: 'main/home/home.html',
+                       link: function(scope, element, attrs) {
+                         scope.liked_mix = function() {
+                           alert(wassup)
+                          element.toggleClass('thumbs outline up icon');
+                         }
+                       }
+                     };
+                   });
 
-// });
 
 }())

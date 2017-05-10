@@ -1,0 +1,42 @@
+{:uriI"‡file://app/assets/javascripts/artists/artist.html?type=text/ng-html&id=ae12cddb60ff0c7ca396d01375241f3bd455f8560edbd40abcb46e02f1c8c377:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/artists/artist.html;T:	nameI"artists/artist;T:logical_pathI"artists/artist.html;T:content_typeI"text/ng-html;T:sourceI"¡<h4>{{ artist }}</h4>
+
+<h4>Artists</h4>
+
+<section class="dj-card">
+    <div class="ui card" >
+      <div ng-repeat="dj in djs | filter:searchBox" class="content">
+        <a href="#" ng-click="getDj(dj.id)" ui-sref="home.artist({ DjName: replaceSpaces(dj.dj_title), djId: dj.id})">
+         <div ng-view="dj" class="meta">
+           <div class="dj-card">
+
+
+           <div class="image">
+             <img ng-src="http://localhost:3000/{{dj.dj_image}}" style="width:150px;height:150px;" alt=""></div>
+              <div class="dj-info">
+                  <h3>{{dj.dj_name}}</h3>
+              </div>
+              <!-- <div class="likes">
+                <a>
+                  <i class="thumbs outline up icon" ng-click="plusOne($index)"></i> {{mix.liked_mixes.length}}
+                </a>
+              </div>
+                  <h5>{{mix.dj.dj_name}}</h5>
+
+
+              </div> -->
+              <div class="container">
+                </div>
+              </div>
+           </div>
+         <!-- <div class="extra-content">
+           <a>
+             <i class="thumbs outline up icon">{{mix.liked_mixes}}</i>
+           </a>
+        </div> -->
+       </div><!--Card-->
+</section>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/artists/artist.html;TT:charsetI"
+utf-8;F:digest"%¸ž*æµ¨‘os¯]\¢3<ñcÈ·}í°û(ºâô”o:lengthi¡:dependencies_digest"%°]3éôlOse“*¥B6ÆÊgøÀ HùïÆ»êë‰í:idI"Eae12cddb60ff0c7ca396d01375241f3bd455f8560edbd40abcb46e02f1c8c377;F:
+mtimel+ôÍìX

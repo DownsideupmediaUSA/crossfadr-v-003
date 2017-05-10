@@ -20,19 +20,16 @@ Rails.application.routes.draw do
     get 'api/djs', to: 'djs#api_index'
     get 'api/djs/:id', to: 'djs#api_show'
 
-    # namespace :api, defaults: {format: 'json'} do
-    #   scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
-    #     resources :mixes
-    #     resources :djs
-    #   end
-    # end
-
-
+    namespace :api, :constraints => { :id => /[0-9]+(\%7C[0-9]+)*/ } do
+        resource :session, only: [:create, :destroy]
+      end
  #  namespace :api, defaults: {format: :json} do
  #   resources :mixes do
  #     resources :comments, only: [:create]
  #   end
  # end
+
+  resources :liked_mixes, only: [:create, :destroy]
 
   resources :mixes, only: [:index, :show, :new, :create, :edit, :update ] do
     resources :comments

@@ -1,23 +1,26 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  protect_from_forgery with: :null_session
+  
+  respond_to :json
 
-  after_filter :set_csrf_cookie_for_ng
-
-  def set_csrf_cookie_for_ng
-    cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
-  end
 
   def home
     render 'layouts/application'
   end
 
-  def configure_permitted_parameters
-    added_attrs = [:username, :email, :password, :password_confirmation,
-    :remember_me]
-    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
-    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  def authenticate_user!
+    token, options = ActionController::HttpAuthentication::Token.token_and_options(request)
+
+    email = options.blank? ? nil : options[:email]
+    user = email && User.find_by(email: email)
+
+    if user && ActiveSupport::SecurityUtils.secure_compare(user.authentication_token, token)
+      @current_user = user
+    else
+      render json: { status: 401, message: "unauthorized" }, status: :unauthorized
+    end
   end
+
 
   def verified_request?
     super || valid_authenticity_token?(session,
