@@ -1,9 +1,7 @@
 div class="login">
-  <h4 ng-if="!vm.currentUser.username"> Hi, {{ vm.user.username}} </h4>
-  <button ng-if="!!vm.currentUser.username" ng-click="vm.logout()" >logout</button>
-  <form ng-if="!vm.currentUser.username" ng-submit="vm.login()">
-    <label for="username">Username:</label>
-    <input type="text" ng-model="vm.userForm.username" required><br>
+  <h4 ng-if="!vm.currentUser.email"> Hi, {{ vm.user.email}} </h4>
+  <button ng-if="!!vm.currentUser.email" ng-click="vm.logout()" >logout</button>
+  <form ng-if="!vm.currentUser.email" ng-submit="vm.login()">
     <label for="username">  Email:</label>
     <input type="email" ng-model="vm.userForm.email" required><br>
     <label for="username">Password:</label>

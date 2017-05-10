@@ -1,0 +1,24 @@
+<h4>Track Details</h4>
+
+<a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
+ <div ng-view="mix" >
+   <div class="dj-card">
+     <div class="image">
+       <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
+     </div><!--image-->
+    <br>
+   <div class="artist-name"><h5>{{mix.dj.dj_name}}</h5></div>
+     <div class="mix-info">
+       <h3>{{mix.mix_title}}</h3></a>
+     </div><!--mix-info-->
+<!-- J-player mock controls -->
+            <div class="jp-controls">
+              <button class="ui compact icon button" role="button" tabindex="0"><i class="play icon"></i></button>
+               <button class="ui compact button" role="button" tabindex="1"><i class="pause icon"></i></button>
+            </div>
+            <br>
+          <a><i class="thumbs outline up icon" ng-click="plusOne($index)" ></i> {{mix.liked_mixes.length}}</a></div>
+
+        </div>
+      </div>
+    
