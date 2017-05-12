@@ -1,4 +1,4 @@
-class Api::ApiController &lt; ActionController::Base
+class Api::ApiController < ActionController::Base
 
   include ActionController::ImplicitRender
   respond_to :json

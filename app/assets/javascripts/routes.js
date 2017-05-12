@@ -37,11 +37,7 @@
              templateUrl: 'static/about.html',
              controller: 'AboutCntrl as ctrl'
            })
-          //  .state('home.register', {
-          //    url:'/register',
-          //    templateUrl: 'main/register.html',
-          //    controller: 'MainCtrl as ctrl'
-          //  });
+          
            // .state('home.jplayer', {
            //   url:'/jplayer',
            //   templateUrl: 'mixes/jplayer.html',

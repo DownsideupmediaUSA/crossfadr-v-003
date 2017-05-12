@@ -22,12 +22,10 @@
                        return string.replace(/\s/g, '-')
                      }
 
-                     $scope.plusOne = function(index) {
-                       const id = $scope.mixes[index].id
-                       $http.post('/liked_mixes', {mix_id: id})
+                     $scope.plusOne = function(mix) {
+                       $http.post('/liked_mixes', {mix_id: mix.id})
                           .success(function(response) {
-                            console.log(response);
-                            $scope.mixes[index].liked_mixes = response.mix_likes;
+                            mix.liked_mixes = response.liked_mixes;
                           })
                           .error(function(resp) {
                             console.log('error', resp);

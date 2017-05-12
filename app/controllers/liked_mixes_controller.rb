@@ -1,5 +1,5 @@
 class LikedMixesController < ApplicationController
- #before_action :authenticate_user!
+ before_action :authenticate_user!
  before_action :set_mix
 
 
@@ -8,7 +8,7 @@ class LikedMixesController < ApplicationController
 
    if new_like.save
      @mix.reload
-     render json: {message: 'success', mix_likes: @mix.liked_mixes.count}, status: 200
+     render json: {message: 'success', liked_mixes: @mix.liked_mixes}, status: 200
    else
      render json: {message: 'error'}, status: 500
    end
@@ -18,7 +18,7 @@ class LikedMixesController < ApplicationController
    like = @current_user.liked_mixes.find_by(mix_id: params[:mix_id])
 
    if like.destroy
-     render json: {message: 'success', mix_likes: @mix.liked_mixes.count}, status: 200
+     render json: {message: 'success', liked_mixes: @mix.liked_mixes}, status: 200
    else
      render json: {message: 'error'}, status: 500
    end
@@ -26,7 +26,6 @@ class LikedMixesController < ApplicationController
 
 private
 def set_mix
-  @current_user = User.find(1)
   @mix = Mix.find_by(id: params[:mix_id])
 end
 

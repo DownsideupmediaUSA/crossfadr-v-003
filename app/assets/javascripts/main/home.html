@@ -4,11 +4,11 @@
     <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
     <a class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
 
-    <form ng-if="!vm.$storage.email" ng-submit="vm.login()">
+    <form ng-if="!$storage.email" ng-submit="login()">
       <label for="username">  Email:</label>
-      <input type="email" ng-model="$scope.userForm.email" required>
+      <input type="email" ng-model="userForm.email" required>
       <label for="username">Password:</label>
-      <input type="text" ng-model="vm.userForm.password" required>
+      <input type="text" ng-model="userForm.password" required>
       <input type="submit" value="login">
     </form>
 
