@@ -17,7 +17,7 @@
         }
 
         function getMix(id) {
-          return $http.get('api/mixes' + id);
+          return $http.get('api/mixes/' + id);
         };
 
         function addMix(newMix) {
