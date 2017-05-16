@@ -26,7 +26,7 @@ class MixesController < ApplicationController
   def create
 
     @mix = Mix.new(mix_params)
-     #binding.pry 
+     #binding.pry
     respond_to do |format|
       if @mix.save
         format.json { render json: @mix, status: :created }

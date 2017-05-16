@@ -7,11 +7,11 @@
     function($scope, $localStorage, $http) {
       var vm = this
       $scope.$storage = $localStorage;
-      //$scope.logout = logout;
+      $scope.logout = logout;
       $scope.userForm = {};
       $scope.login = login;
 
-      function login() {        
+      function login() {
         var loginData = {user: $scope.userForm};
         $http.post('/api/session ', loginData)
           .success(function(resp) {
@@ -25,7 +25,15 @@
       }
 
       function logout() {
+        $http.delete('/api/session')
 
+          .success(function(resp) {
+           delete $scope.$storage.email
+           delete $scope.$storage.token
+         })
+         .error(function(err){
+           console.log(err)
+         })
       }
     }])
 }());

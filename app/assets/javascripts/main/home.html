@@ -8,15 +8,15 @@
       <label for="username">  Email:</label>
       <input type="email" ng-model="userForm.email" required>
       <label for="username">Password:</label>
-      <input type="text" ng-model="userForm.password" required>
+      <input type="password" ng-model="userForm.password" required>
       <input type="submit" value="login">
     </form>
 
+   <button class="mini ui secondary basic button" ng-if="!!$storage.email" ng-click="logout()">Log Out</button>
+
 
   <div class="right menu" id="abId0.43591901674613154">
-    <div class="item" id="abId0.5321512046600605">
 
-    </div>
   </div>
 </div>
 <div class="ui raised very padded text container segment1">
@@ -44,8 +44,8 @@
 
 
 
-      <p><a ng-if="!vm.currentUser.email" class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Listen<span class="sr-only"></span></a></p></button>
-      <p><a class="ui secondary basic button" href="#" ui-sref="home.register" role="button" ui-sref-active="active" >Sign Up!<span class="sr-only"></span></a></p></button>
+      <p><a ng-if="!!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Listen<span class="sr-only"></span></a></p></button>
+      <p><a ng-if="!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.register" role="button" ui-sref-active="active" >Sign Up!<span class="sr-only"></span></a></p></button>
 
   </div><!--ui-message-->
   <div class="ui raised very padded text container segment 2">

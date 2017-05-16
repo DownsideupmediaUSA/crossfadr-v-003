@@ -1,7 +1,7 @@
 <h4>Track Details</h4>
+<div class="content" >
 
-<a href="#" ng-click="getMix(mix.id)" ui-sref="home.track({ mixTitle: replaceSpaces(mix.mix_title), mixId: mix.id})">
- <div ng-view="mix" >
+ <div ng-view="getMix(mix.id)">
    <div class="dj-card">
      <div class="image">
        <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
@@ -20,4 +20,5 @@
           <a><i class="thumbs outline up icon" ng-click="plusOne($index)" ></i> {{mix.liked_mixes.length}}</a></div>
 
         </div>
+      </div>
       </div>

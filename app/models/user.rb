@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   before_create :generate_authentication_token
   before_create :encrypt_password
+  before_update :encrypt_password, if: :password_changed?
 
   # API methods
   def verified_password? pass

@@ -4,18 +4,19 @@
 
   angular
      .module('crossfadr')
-     .controller('MixCntrl', ['$http', '$stateParams', 'MixesFactory', '$scope',
-     function($http, $stateParams, MixesFactory, $scope ) {
-
+     .controller('MixCntrl', ['$http', '$stateParams', 'MixesFactory', '$location', '$scope',
+     function($http, $stateParams, MixesFactory, $location, $scope ) {
          var vm = this
          $scope.mixes = []
          vm.replaceSpaces = replaceSpaces
+         $scope.getMix = function(id) {
+         $location.path('/home/mixes/' + id)
+         }
          MixesFactory.getMixes()
                      .then(setMixes)
 
                      function setMixes(data) {
                        $scope.mixes = data.data
-                      //  console.log(data)
                      }
 
                      function replaceSpaces(string) {
@@ -32,11 +33,6 @@
                           });
                      };
 
-
-
-
-
-
-                     }])
+     }])
 
  }())

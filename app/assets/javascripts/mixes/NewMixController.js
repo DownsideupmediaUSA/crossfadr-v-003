@@ -11,21 +11,13 @@
     $scope.mix_title = '';
     $scope.dj_name = '';
     $scope.mix_image = [];
-
-
-    // Outlets
-
     $scope.files = [];
     $scope.description = '';
-
-    // Action Outlets
     ctrl.submit = submit
-
 
     DjsFactory.getDjs().then(function(data) {
       ctrl.djs = data.data;
     });
-
     function submit(addMix) {
       var f = document.getElementById('mix-image-file').files[0],
       r = new FileReader();

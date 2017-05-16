@@ -46,7 +46,7 @@ gem 'enumerize'
 
 gem "paperclip", "~> 5.0.0"
 
-gem 'dotenv'
+gem 'figaro'
 
 gem 'will_paginate', '~> 3.1.0'
 

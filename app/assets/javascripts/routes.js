@@ -22,7 +22,7 @@
              controller: 'ArtistCntrl as ctrl'
            })
            .state('home.track', {
-             url:'mixes/:id',
+             url:'/mixes/:id',
              templateUrl: 'mixes/show.html',
              controller: 'mixDetailCntrl as ctrl'
            })
@@ -37,7 +37,7 @@
              templateUrl: 'static/about.html',
              controller: 'AboutCntrl as ctrl'
            })
-          
+
            // .state('home.jplayer', {
            //   url:'/jplayer',
            //   templateUrl: 'mixes/jplayer.html',
