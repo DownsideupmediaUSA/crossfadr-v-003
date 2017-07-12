@@ -1,0 +1,17 @@
+{:uriI"‚file://app/assets/javascripts/mixes/new.html?type=text/ng-html&id=819c3c833a7e325a0b9771ba0dae4d11a41b42799d84434b689945ec32448d52:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/mixes/new.html;T:	nameI"mixes/new;T:logical_pathI"mixes/new.html;T:content_typeI"text/ng-html;T:sourceI"Q<h4>New Track</h4>
+<form name="addMix" ng-submit="ctrl.submit()" >
+  <input type = "file" file-model="mix_image" id="mix-image-file"/>
+   <div class="form-group2"><br>
+      <p>Title:<input type="text" name="input" ng-model="mix_title"  required></p>
+         Artist:
+         <select ng-model="dj_name"><option ng-repeat="dj in ctrl.djs" ng-value="dj.dj_name" required >{{dj.dj_name }}</option>
+         </select>
+    </div><br>
+   <div ng-app="module" ng-controller="NewMixController"></div><br>
+ <input id="save" type="submit"  class="ui mini secondary basic button grey "></input>
+</form>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/mixes/new.html;TT:charsetI"
+utf-8;F:digest"%êã>ß¹'LÅKùÁÕâf‡^Hðü!óÆpM×Æ%)úÚ:lengthiQ:dependencies_digest"%îFY]0E4áç#*aÝÊðým–ï‹¢‡WàÅ²ÜjÎ:idI"E819c3c833a7e325a0b9771ba0dae4d11a41b42799d84434b689945ec32448d52;F:
+mtimel+]IY

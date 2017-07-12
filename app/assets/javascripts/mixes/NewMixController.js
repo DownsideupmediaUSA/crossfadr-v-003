@@ -36,11 +36,9 @@
         .addMix(newMix)
         .then(function(response) {
           $state.go('home.tracks')
-
        })
       }
       r.readAsDataURL(f);
-
     };
   }]);
 }())

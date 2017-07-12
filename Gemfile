@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.1'
+gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -46,7 +46,7 @@ gem 'enumerize'
 
 gem "paperclip", "~> 5.0.0"
 
-gem 'figaro'
+gem 'dotenv'
 
 gem 'will_paginate', '~> 3.1.0'
 
@@ -54,15 +54,16 @@ gem 'seed_dump'
 
 gem 'pry'
 
-gem 'acts_as_votable'
-
-gem 'devise_token_auth'
-
 
 
   gem 'angular-rails-templates'
+  gem 'responders'
   gem 'bower-rails'
   gem 'momentjs-rails'
+  gem "typhoeus"
+  gem 'virtus'
+  gem 'spark'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

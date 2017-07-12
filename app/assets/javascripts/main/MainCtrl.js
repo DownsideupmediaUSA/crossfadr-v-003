@@ -10,6 +10,7 @@
       $scope.logout = logout;
       $scope.userForm = {};
       $scope.login = login;
+      $scope.mostLikedMixes = mostLikedMixes;
 
       function login() {
         var loginData = {user: $scope.userForm};
@@ -24,9 +25,15 @@
           })
       }
 
+      function mostLikedMixes(mixes) {
+        mixes.sort(function(a, b) {
+          return a.liked_mixes.count - b.liked_mixes.count;
+        })
+          console.log(mixes)
+      }
+
       function logout() {
         $http.delete('/api/session')
-
           .success(function(resp) {
            delete $scope.$storage.email
            delete $scope.$storage.token

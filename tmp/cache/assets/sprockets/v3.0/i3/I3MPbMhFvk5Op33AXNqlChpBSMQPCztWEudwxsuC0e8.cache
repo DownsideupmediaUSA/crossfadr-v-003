@@ -1,0 +1,40 @@
+{:uriI"„file://app/assets/javascripts/mixes/mixes.html?type=text/ng-html&id=3d16728c687bb5a1e3a37f396f471abfd24207552d3485ee73fc204f9f3c49d6:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/mixes/mixes.html;T:	nameI"mixes/mixes;T:logical_pathI"mixes/mixes.html;T:content_typeI"text/ng-html;T:sourceI"ä<h4>Mixes</h4>
+<div class="ui icon input" id="abId0.35340520332811876" abineguid="F79FEA1EF9E44E9F80F28A95AF6E9CC2">
+  <input type="text" ng-model="searchBox" placeholder="Search Me...">
+  <i class="search link icon"></i>
+</div><br><br>
+
+<div class="mix-content">
+<section class="mix-card">
+    <div class="ui card" >
+      <div class="content" ng-repeat="mix in mixes | filter:searchBox" >
+        <a ng-click="getMix(mix.id)">
+         <div ng-view="mix" >
+           <div class="dj-card">
+             <div class="image">
+               <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
+             </div><!--image-->
+            <br>
+           <div class="artist-name"><h5>{{mix.dj.dj_name}}</h5></div>
+             <div class="mix-info">
+               <h3>{{mix.mix_title}}</h3></a>
+             </div><!--mix-info-->
+  <!-- J-player mock controls -->
+             				<div class="jp-controls">
+             					<button class="ui compact icon button" role="button" tabindex="0"><i class="play icon"></i></button>
+                       <button class="ui compact button" role="button" tabindex="1"><i class="pause icon"></i></button>
+                    </div>
+                    <br>
+                  <a><i class="thumbs outline up icon" ng-click="plusOne(mix)" ></i> {{mix.liked_mixes.length}}</a></div>
+
+             		</div>
+              </div>
+             </div>
+   </div><!--div-content-->
+ </div><!--ui-Card-->
+</section><!--mix-card-->
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/mixes/mixes.html;TT:charsetI"
+utf-8;F:digest"%ÞÐí@˜’×gÄ˜ºS+±º_rzùQ‡K¡ú5G:lengthiä:dependencies_digest"%Û¢0É5(ú.Øù”j ¬öÆüxÒÃÍ2žýï:idI"E3d16728c687bb5a1e3a37f396f471abfd24207552d3485ee73fc204f9f3c49d6;F:
+mtimel+ZHY

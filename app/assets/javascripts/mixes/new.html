@@ -2,7 +2,7 @@
 <form name="addMix" ng-submit="ctrl.submit()" >
   <input type = "file" file-model="mix_image" id="mix-image-file"/>
    <div class="form-group2"><br>
-      <p>Title:<input type="text" name="input" ng-model="mix_title"  required></p>
+      <p>Title:<input type="text" name="input" ng-model="mix_title" required></p>
          Artist:
          <select ng-model="dj_name"><option ng-repeat="dj in ctrl.djs" ng-value="dj.dj_name" required >{{dj.dj_name }}</option>
          </select>

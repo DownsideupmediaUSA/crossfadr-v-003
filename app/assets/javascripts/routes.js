@@ -38,6 +38,8 @@
              controller: 'AboutCntrl as ctrl'
            })
 
+           
+
            // .state('home.jplayer', {
            //   url:'/jplayer',
            //   templateUrl: 'mixes/jplayer.html',

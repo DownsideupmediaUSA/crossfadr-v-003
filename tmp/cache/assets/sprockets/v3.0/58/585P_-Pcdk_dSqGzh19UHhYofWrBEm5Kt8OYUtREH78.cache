@@ -1,0 +1,14 @@
+{:uriI"Üfile://app/assets/javascripts/main/register.html?type=text/ng-html&id=a1d8b86ad80c058a8963d838c1bc63ce0df27de7c551ee88ea610bca93bc6fde:ET:load_pathI"app/assets/javascripts;T:filenameI".app/assets/javascripts/main/register.html;T:	nameI"main/register;T:logical_pathI"main/register.html;T:content_typeI"text/ng-html;T:sourceI"[<h4>Register</h4>
+
+<form ng-if="!vm.currentUser.username" ng-submit="vm.register()">
+  <label for="username">  Email:</label>
+  <input type="email" ng-model="vm.newUser.email" required><br>
+  <label for="username">Password:</label>
+  <input type="text" ng-model="vm.newUser.password" required><br>
+  <input type="submit" value="Register">
+</form>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"<file-digest://app/assets/javascripts/main/register.html;TT:charsetI"
+utf-8;F:digest"%%˛ã6Ì\3πAå7—á˜|Lû«[≤w∞¬¢∞8T∂√:lengthi[:dependencies_digest"%óˇLR‘Á$—c%‚T:˘>à˝G«è:€∫Û©âÇ:idI"Ea1d8b86ad80c058a8963d838c1bc63ce0df27de7c551ee88ea610bca93bc6fde;F:
+mtimel+±Y

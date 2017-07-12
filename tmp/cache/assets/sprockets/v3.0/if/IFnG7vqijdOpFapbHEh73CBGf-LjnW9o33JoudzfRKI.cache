@@ -1,0 +1,22 @@
+{:uriI"ƒfile://app/assets/javascripts/mixes/show.html?type=text/ng-html&id=ee4a5a90b1d67bc3529d1637411624774035cc781ba42358a7fcf42882bccdb8:ET:load_pathI"app/assets/javascripts;T:filenameI"+app/assets/javascripts/mixes/show.html;T:	nameI"mixes/show;T:logical_pathI"mixes/show.html;T:content_typeI"text/ng-html;T:sourceI"<h4>Track Details</h4>
+<div ng-view="mix-detail" >
+   <div class="dj-card">
+     <div class="image">
+       <img ng-src="http://localhost:3000/{{mix.mix_image}}" style="width:100px;height:100px;" alt=""></div>
+     </div><br><!--image-->
+   <div class="artist-name"><h5>{{mix.dj.dj_name}}</h5></div>
+     <div class="mix-info">
+       <h3>{{mix.mix_title}}</h3></a>
+     </div>
+        <div class="jp-controls">
+          <button class="ui compact icon button" role="button" tabindex="0"><i class="play icon"></i></button>
+          <button class="ui compact button" role="button" tabindex="1"><i class="pause icon"></i></button>
+          <a><i class="thumbs outline up icon" ng-click="plusOne($index)" ></i> {{mix.liked_mixes.length}}</a></div>
+        </div><br>
+     </div>
+ </div>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"9file-digest://app/assets/javascripts/mixes/show.html;TT:charsetI"
+utf-8;F:digest"%˜¦,€šÄóo»:{á±0w¹ò5ŸRaçl‰ıı‰e­:lengthi:dependencies_digest"%™±öÑH$Êà=tb²+¶´ú^°$¤3·)|ñ:idI"Eee4a5a90b1d67bc3529d1637411624774035cc781ba42358a7fcf42882bccdb8;F:
+mtimel+æY

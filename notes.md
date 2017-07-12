@@ -23,3 +23,13 @@ Use angular
  - needs to make load data from rails active record/files
  - player should populate for each individual song
  - use custom directives in conjunction with mixer controller
+
+ <!-- <form ng-if="!vm.currentUser.username" ng-submit="vm.register()">
+   <label for="username">Username:</label>
+   <input type="text" ng-model="vm.newUser.username" required><br>
+   <label for="username">  Email:</label>
+   <input type="email" ng-model="vm.newUser.email" required><br>
+   <label for="username">Password:</label>
+   <input type="text" ng-model="vm.newUser.password" required><br>
+   <input type="submit" value="Register">
+ </form> -->

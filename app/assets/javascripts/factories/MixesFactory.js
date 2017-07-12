@@ -5,7 +5,6 @@
       .module('crossfadr')
       .factory('MixesFactory', ['$http', function($http) {
 
-
         return {
           getMixes: getMixes,
           getMix: getMix,
@@ -29,11 +28,8 @@
               }
               , data: {mix: newMix }
           }
-
-
         return $http.post('api/mixes', {mix: newMix});
         }
-
 
         function handleCreate(response) {
           return response.data
@@ -41,8 +37,7 @@
 
         function handleResponse(response) {
             return response.data
-         }
-
+        }
 
      }])
 }())

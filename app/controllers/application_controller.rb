@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   respond_to :json
 
+  
+
 
   def home
     render 'layouts/application'

@@ -2,8 +2,7 @@
   <a href="/" class="item" ui-sref-active="active">Home<span class="sr-only"></span></a>
     <a class="item" href="#" ui-sref="home.about"  ui-sref-active="active">About <span class="sr-only"></span></a>
     <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
-    <a class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
-
+    <a ng-if="!!$storage.email" class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
     <form ng-if="!$storage.email" ng-submit="login()">
       <label for="username">  Email:</label>
       <input type="email" ng-model="userForm.email" required>
@@ -11,12 +10,8 @@
       <input type="password" ng-model="userForm.password" required>
       <input type="submit" value="login">
     </form>
-
    <button class="mini ui secondary basic button" ng-if="!!$storage.email" ng-click="logout()">Log Out</button>
-
-
   <div class="right menu" id="abId0.43591901674613154">
-
   </div>
 </div>
 <div class="ui raised very padded text container segment1">
@@ -26,27 +21,9 @@
        CROSSFADR
       <h6>Your source for the hottest dance music!</h6>
     </div><!--header-->
-
     <div class="login">
-
-    </div>
-
-      <!-- <form ng-if="!vm.currentUser.username" ng-submit="vm.register()">
-        <label for="username">Username:</label>
-        <input type="text" ng-model="vm.newUser.username" required><br>
-        <label for="username">  Email:</label>
-        <input type="email" ng-model="vm.newUser.email" required><br>
-        <label for="username">Password:</label>
-        <input type="text" ng-model="vm.newUser.password" required><br>
-        <input type="submit" value="Register">
-      </form> -->
-
-
-
-
-      <p><a ng-if="!!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Listen<span class="sr-only"></span></a></p></button>
-      <p><a ng-if="!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.register" role="button" ui-sref-active="active" >Sign Up!<span class="sr-only"></span></a></p></button>
-
+      <p><a ng-if="!!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Tracks<span class="sr-only"></span></a></p></button>      <!-- <p><a ng-if="!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.register" role="button" ui-sref-active="active" >Sign Up!<span class="sr-only"></span></a></p></button> -->
+   </div><!--login-->
   </div><!--ui-message-->
   <div class="ui raised very padded text container segment 2">
      <div class="ui container">

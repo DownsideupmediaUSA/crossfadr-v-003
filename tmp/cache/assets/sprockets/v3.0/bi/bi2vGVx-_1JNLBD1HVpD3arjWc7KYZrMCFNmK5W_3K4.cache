@@ -1,0 +1,39 @@
+{:uriI"‚file://app/assets/javascripts/main/home.html?type=text/ng-html&id=64869e0b7f72854fcec7342a187fc7beaf0b3b55d0e3ef3ee6e4b05aba5caa14:ET:load_pathI"app/assets/javascripts;T:filenameI"*app/assets/javascripts/main/home.html;T:	nameI"main/home;T:logical_pathI"main/home.html;T:content_typeI"text/ng-html;T:sourceI"\<div class="ui secondary menu">
+  <a href="/" class="item" ui-sref-active="active">Home<span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.about"  ui-sref-active="active">About <span class="sr-only"></span></a>
+    <a class="item" href="#" ui-sref="home.artists"  ui-sref-active="active">Artists <span class="sr-only"></span></a>
+    <a ng-if="!!$storage.email" class="item" href="#" ui-sref="home.new"  ui-sref-active="active">New Track <span class="sr-only"></span></a>
+    <form ng-if="!$storage.email" ng-submit="login()">
+      <label for="username">  Email:</label>
+      <input type="email" ng-model="userForm.email" required>
+      <label for="username">Password:</label>
+      <input type="password" ng-model="userForm.password" required>
+      <input type="submit" value="login">
+    </form>
+   <button class="mini ui secondary basic button" ng-if="!!$storage.email" ng-click="logout()">Log Out</button>
+  <div class="right menu" id="abId0.43591901674613154">
+  </div>
+</div>
+<div class="ui raised very padded text container segment1">
+  <div class="ui message">
+    <div class="header">
+      <h6>Welcome to...</h6>
+       CROSSFADR
+      <h6>Your source for the hottest dance music!</h6>
+    </div><!--header-->
+    <div class="login">
+      <p><a ng-if="!!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.tracks" role="button" ui-sref-active="active" >Tracks<span class="sr-only"></span></a></p></button>
+      <!-- <p><a ng-if="!$storage.email" class="ui secondary basic button" href="#" ui-sref="home.register" role="button" ui-sref-active="active" >Sign Up!<span class="sr-only"></span></a></p></button> -->
+   </div><!--login-->
+  </div><!--ui-message-->
+  <div class="ui raised very padded text container segment 2">
+     <div class="ui container">
+       <ui-view></ui-view>
+     </div>
+  </div>
+</div> <!--segment>
+;T:metadata{	:dependencieso:Set:
+@hash{
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"8file-digest://app/assets/javascripts/main/home.html;TT:charsetI"
+utf-8;F:digest"%Ê³”•$\@9:‰”ìlƒ*‡šµr«è(Vt‹‰:lengthi\:dependencies_digest"%yŸÿú»½¡Ş‰ŸèMjF+Ò[òåk²²(ú"q­D:idI"E64869e0b7f72854fcec7342a187fc7beaf0b3b55d0e3ef3ee6e4b05aba5caa14;F:
+mtimel+QY
